@@ -23,7 +23,12 @@ namespace Proyecto_RegistroVacunas
             {
                 txtQuantityNurses.Text = "1";
             }*/
+            
+        }
 
+        protected void txtStartAttention_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
