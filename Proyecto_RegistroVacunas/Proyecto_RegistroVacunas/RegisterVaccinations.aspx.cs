@@ -16,6 +16,13 @@ namespace Proyecto_RegistroVacunas
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
+            /*
+            DateTime startAttetion = DateTime.Parse(txtStartAttention.Text);
+            DateTime endAttention = DateTime.Parse(txtEndAttention.Text);
+            if (startAttetion >= endAttention)
+            {
+                txtQuantityNurses.Text = "1";
+            }*/
 
         }
     }
