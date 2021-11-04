@@ -38,9 +38,6 @@
         #imgForm {
             width: 200px;
         }
-        #formRegisterVaccinations {
-            height: 538px;
-        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -52,8 +49,8 @@
                     <asp:TextBox CssClass="txtForm" ID="txtQuantityVaccionations" runat="server" TextMode="Number"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Requiere el campo de cantidad de vacunas" ControlToValidate="txtQuantityVaccionations">*</asp:RequiredFieldValidator>
                     <asp:CustomValidator ID="CustomValidator1" runat="server" BorderStyle="None" ErrorMessage="Debe ser un numero mayor a 0" ClientValidationFunction="checkPositiveNumbers" ControlToValidate="txtQuantityVaccionations">*</asp:CustomValidator>
-                    <asp:Label ID="Label1" runat="server" Text="Tiempo requerido para aplicar la dosis:"></asp:Label>
-                    <asp:TextBox CssClass="txtForm" ID="txtDoseTime" runat="server" TextMode="Time"></asp:TextBox>
+                    <asp:Label ID="Label1" runat="server" Text="Tiempo requerido para aplicar la dosis (minutos):"></asp:Label>
+                    <asp:TextBox CssClass="txtForm" ID="txtDoseTime" runat="server" TextMode="Number"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDoseTime" ErrorMessage="Requiere el campo tiempo aplicar dosis">*</asp:RequiredFieldValidator>
                 </div>
                 <br />
@@ -71,16 +68,16 @@
                 <br />
                 <div class="row">
                     <asp:Label ID="Label5" runat="server" Text="Horario de Inicio:"></asp:Label>
-                    <asp:TextBox CssClass="txtForm" ID="txtStartAttention" runat="server" TextMode="Time" OnLoad="txtStartAttention_Load" ></asp:TextBox>
+                    <asp:TextBox CssClass="txtForm" ID="txtStartAttention" runat="server" TextMode="Time"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtStartAttention" ErrorMessage="El campo horario de inicio es requerido">*</asp:RequiredFieldValidator>
                     <asp:Label ID="Label6" runat="server" Text="Horario de Fin:"></asp:Label>
                     <asp:TextBox CssClass="txtForm" ID="txtEndAttention" runat="server" TextMode="Time"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtEndAttention" ErrorMessage="El campo horario de Fin es requerido">*</asp:RequiredFieldValidator>
                     <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtStartAttention" ControlToValidate="txtEndAttention" ErrorMessage="Horario de Inicio debe ser menor al horario de Fin" Operator="GreaterThan">*</asp:CompareValidator>
-                    <span id="PRUEBA" runat="server"></span>
                 </div>
                 <br />
                 <asp:Button ID="btnRegister" runat="server" Text="Registrar" OnClick="btnRegister_Click" />
+                <asp:Label runat="server" ID="PRUEBAS"></asp:Label>
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
             </div>
             <div>
