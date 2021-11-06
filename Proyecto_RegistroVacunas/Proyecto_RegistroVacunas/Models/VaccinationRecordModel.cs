@@ -8,6 +8,13 @@ namespace Proyecto_RegistroVacunas.Models
 {
     public class VaccinationRecordModel : IVaccionationRecord
     {
+        public DateTime BussinessHours(DateTime startAttention, DateTime endAttention)
+        {
+            string totalTimeAttentionString = (endAttention - startAttention).ToString(@"hh\ mm\ ");
+            string totalTimeFormat = totalTimeAttentionString.Substring(0, 2) + ":" + totalTimeAttentionString.Substring(3, 2);
+            return DateTime.ParseExact(totalTimeFormat, "HH:mm", null);
+        }
+
         public void Delete(VaccionationRecord t)
         {
             throw new NotImplementedException();

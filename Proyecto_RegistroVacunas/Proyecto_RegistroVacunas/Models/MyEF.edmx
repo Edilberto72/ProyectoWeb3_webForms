@@ -41,10 +41,11 @@
           </Key>
           <Property Name="VaccionationRecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="vaccineQuantity" Type="int" Nullable="false" />
-          <Property Name="doseTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="doseTime" Type="time" Precision="0" Nullable="false" />
           <Property Name="nursesQuantity" Type="tinyint" Nullable="false" />
           <Property Name="startDate" Type="datetime" Nullable="false" />
-          <Property Name="businessHours" Type="time" Precision="7" Nullable="false" />
+          <Property Name="startAttention" Type="time" Precision="0" Nullable="false" />
+          <Property Name="endAttention" Type="time" Precision="0" Nullable="false" />
           <Property Name="UserID" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_VaccinationAppointment_User">
@@ -152,10 +153,11 @@
           </Key>
           <Property Name="VaccionationRecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="vaccineQuantity" Type="Int32" Nullable="false" />
-          <Property Name="doseTime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="doseTime" Type="Time" Nullable="false" Precision="0" />
           <Property Name="nursesQuantity" Type="Byte" Nullable="false" />
           <Property Name="startDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="businessHours" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="startAttention" Type="Time" Nullable="false" Precision="0" />
+          <Property Name="endAttention" Type="Time" Nullable="false" Precision="0" />
           <Property Name="UserID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="User" Relationship="Self.FK_VaccionationRecord_User" FromRole="VaccionationRecord" ToRole="User" />
           <NavigationProperty Name="VaccinationSchedule" Relationship="Self.FK_VaccinationSchedule_VaccionationRecord" FromRole="VaccionationRecord" ToRole="VaccinationSchedule" />
@@ -267,7 +269,8 @@
                 <ScalarProperty Name="doseTime" ColumnName="doseTime" />
                 <ScalarProperty Name="nursesQuantity" ColumnName="nursesQuantity" />
                 <ScalarProperty Name="startDate" ColumnName="startDate" />
-                <ScalarProperty Name="businessHours" ColumnName="businessHours" />
+                <ScalarProperty Name="startAttention" ColumnName="startAttention" />
+                <ScalarProperty Name="endAttention" ColumnName="endAttention" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
               </MappingFragment>
             </EntityTypeMapping>

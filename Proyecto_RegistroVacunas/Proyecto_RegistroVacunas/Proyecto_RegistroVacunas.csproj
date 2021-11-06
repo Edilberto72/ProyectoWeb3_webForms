@@ -77,15 +77,15 @@
   <ItemGroup>
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Models\MyEF.Context.tt">
+    <Content Include="Models\myEF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MyEF.Context.cs</LastGenOutput>
-      <DependentUpon>MyEF.edmx</DependentUpon>
+      <DependentUpon>myEF.edmx</DependentUpon>
+      <LastGenOutput>myEF.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\MyEF.tt">
+    <Content Include="Models\myEF.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MyEF.edmx</DependentUpon>
-      <LastGenOutput>MyEF.cs</LastGenOutput>
+      <DependentUpon>myEF.edmx</DependentUpon>
+      <LastGenOutput>myEF.cs</LastGenOutput>
     </Content>
     <Content Include="RegisterVaccinations.aspx" />
     <Content Include="Web.config" />
@@ -104,34 +104,34 @@
     <Compile Include="Interfaces\IGeneric.cs" />
     <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="Interfaces\IVaccionationRecord.cs" />
-    <Compile Include="Models\MyEF.Context.cs">
+    <Compile Include="Models\myEF.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MyEF.Context.tt</DependentUpon>
+      <DependentUpon>myEF.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\MyEF.cs">
+    <Compile Include="Models\myEF.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MyEF.tt</DependentUpon>
+      <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\MyEF.Designer.cs">
+    <Compile Include="Models\myEF.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MyEF.edmx</DependentUpon>
+      <DependentUpon>myEF.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
-      <DependentUpon>MyEF.tt</DependentUpon>
+      <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\VaccinationAppointment.cs">
-      <DependentUpon>MyEF.tt</DependentUpon>
+      <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VaccinationRecordModel.cs" />
     <Compile Include="Models\VaccinationSchedule.cs">
-      <DependentUpon>MyEF.tt</DependentUpon>
+      <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VaccionationRecord.cs">
-      <DependentUpon>MyEF.tt</DependentUpon>
+      <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterVaccinations.aspx.cs">
@@ -150,12 +150,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\MyEF.edmx">
+    <EntityDeploy Include="Models\myEF.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MyEF.Designer.cs</LastGenOutput>
+      <LastGenOutput>myEF.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\MyEF.edmx.diagram">
-      <DependentUpon>MyEF.edmx</DependentUpon>
+    <Content Include="Models\myEF.edmx.diagram">
+      <DependentUpon>myEF.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <Content Include="Site.Master" />

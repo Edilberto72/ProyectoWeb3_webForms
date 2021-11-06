@@ -36,10 +36,11 @@
     </Key>
     <Property Name="VaccionationRecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="vaccineQuantity" Type="int" Nullable="false" />
-    <Property Name="doseTime" Type="time" Precision="7" Nullable="false" />
+    <Property Name="doseTime" Type="time" Precision="0" Nullable="false" />
     <Property Name="nursesQuantity" Type="tinyint" Nullable="false" />
     <Property Name="startDate" Type="datetime" Nullable="false" />
-    <Property Name="businessHours" Type="time" Precision="7" Nullable="false" />
+    <Property Name="startAttention" Type="time" Precision="0" Nullable="false" />
+    <Property Name="endAttention" Type="time" Precision="0" Nullable="false" />
     <Property Name="UserID" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_VaccinationAppointment_User">
