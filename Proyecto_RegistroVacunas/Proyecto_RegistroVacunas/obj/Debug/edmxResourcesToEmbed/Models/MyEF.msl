@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBVaccineControlModelStoreContainer" CdmEntityContainer="DBVaccineControlEntities">
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="DBVaccineControlModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="secondLastName" ColumnName="secondLastName" />
+          <ScalarProperty Name="userType" ColumnName="userType" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="vaccinated" ColumnName="vaccinated" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VaccinationAppointment">
+      <EntityTypeMapping TypeName="DBVaccineControlModel.VaccinationAppointment">
+        <MappingFragment StoreEntitySet="VaccinationAppointment">
+          <ScalarProperty Name="VaccionationRecordID" ColumnName="VaccionationRecordID" />
+          <ScalarProperty Name="expiration" ColumnName="expiration" />
+          <ScalarProperty Name="vaccinationDay" ColumnName="vaccinationDay" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VaccinationSchedule">
+      <EntityTypeMapping TypeName="DBVaccineControlModel.VaccinationSchedule">
+        <MappingFragment StoreEntitySet="VaccinationSchedule">
+          <ScalarProperty Name="VaccinationScheduleID" ColumnName="VaccinationScheduleID" />
+          <ScalarProperty Name="vaccinesAvailable" ColumnName="vaccinesAvailable" />
+          <ScalarProperty Name="VaccionationRecordID" ColumnName="VaccionationRecordID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VaccionationRecord">
+      <EntityTypeMapping TypeName="DBVaccineControlModel.VaccionationRecord">
+        <MappingFragment StoreEntitySet="VaccionationRecord">
+          <ScalarProperty Name="VaccionationRecordID" ColumnName="VaccionationRecordID" />
+          <ScalarProperty Name="vaccineQuantity" ColumnName="vaccineQuantity" />
+          <ScalarProperty Name="doseTime" ColumnName="doseTime" />
+          <ScalarProperty Name="nursesQuantity" ColumnName="nursesQuantity" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="businessHours" ColumnName="businessHours" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

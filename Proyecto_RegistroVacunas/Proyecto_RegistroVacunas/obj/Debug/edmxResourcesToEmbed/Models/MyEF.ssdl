@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBVaccineControlModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="secondLastName" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="userType" Type="tinyint" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="vaccinated" Type="tinyint" Nullable="false" />
+    <Property Name="state" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VaccinationAppointment">
+    <Key>
+      <PropertyRef Name="VaccionationRecordID" />
+    </Key>
+    <Property Name="VaccionationRecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="expiration" Type="tinyint" Nullable="false" />
+    <Property Name="vaccinationDay" Type="date" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VaccinationSchedule">
+    <Key>
+      <PropertyRef Name="VaccinationScheduleID" />
+    </Key>
+    <Property Name="VaccinationScheduleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vaccinesAvailable" Type="tinyint" Nullable="false" />
+    <Property Name="VaccionationRecordID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VaccionationRecord">
+    <Key>
+      <PropertyRef Name="VaccionationRecordID" />
+    </Key>
+    <Property Name="VaccionationRecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vaccineQuantity" Type="int" Nullable="false" />
+    <Property Name="doseTime" Type="time" Precision="7" Nullable="false" />
+    <Property Name="nursesQuantity" Type="tinyint" Nullable="false" />
+    <Property Name="startDate" Type="datetime" Nullable="false" />
+    <Property Name="businessHours" Type="time" Precision="7" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_VaccinationAppointment_User">
+    <End Role="User" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VaccinationAppointment" Type="Self.VaccinationAppointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="VaccinationAppointment">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VaccinationSchedule_VaccionationRecord">
+    <End Role="VaccionationRecord" Type="Self.VaccionationRecord" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VaccinationSchedule" Type="Self.VaccinationSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VaccionationRecord">
+        <PropertyRef Name="VaccionationRecordID" />
+      </Principal>
+      <Dependent Role="VaccinationSchedule">
+        <PropertyRef Name="VaccionationRecordID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VaccionationRecord_User">
+    <End Role="User" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VaccionationRecord" Type="Self.VaccionationRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="VaccionationRecord">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBVaccineControlModelStoreContainer">
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VaccinationAppointment" EntityType="Self.VaccinationAppointment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VaccinationSchedule" EntityType="Self.VaccinationSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VaccionationRecord" EntityType="Self.VaccionationRecord" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_VaccinationAppointment_User" Association="Self.FK_VaccinationAppointment_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="VaccinationAppointment" EntitySet="VaccinationAppointment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VaccinationSchedule_VaccionationRecord" Association="Self.FK_VaccinationSchedule_VaccionationRecord">
+      <End Role="VaccionationRecord" EntitySet="VaccionationRecord" />
+      <End Role="VaccinationSchedule" EntitySet="VaccinationSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VaccionationRecord_User" Association="Self.FK_VaccionationRecord_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="VaccionationRecord" EntitySet="VaccionationRecord" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
