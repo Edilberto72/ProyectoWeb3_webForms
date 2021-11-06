@@ -42,7 +42,8 @@
           <ScalarProperty Name="doseTime" ColumnName="doseTime" />
           <ScalarProperty Name="nursesQuantity" ColumnName="nursesQuantity" />
           <ScalarProperty Name="startDate" ColumnName="startDate" />
-          <ScalarProperty Name="businessHours" ColumnName="businessHours" />
+          <ScalarProperty Name="startAttention" ColumnName="startAttention" />
+          <ScalarProperty Name="endAttention" ColumnName="endAttention" />
           <ScalarProperty Name="UserID" ColumnName="UserID" />
         </MappingFragment>
       </EntityTypeMapping>

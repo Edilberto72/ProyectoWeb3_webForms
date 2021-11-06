@@ -9,5 +9,6 @@ namespace Proyecto_RegistroVacunas.Interfaces
 {
     interface IVaccionationRecord : IGeneric<VaccionationRecord>
     {
+        DateTime BussinessHours(DateTime startAttention, DateTime endAttention);
     }
 }

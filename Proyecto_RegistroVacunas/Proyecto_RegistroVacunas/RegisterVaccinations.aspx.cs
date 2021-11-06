@@ -31,9 +31,7 @@ namespace Proyecto_RegistroVacunas
                 int quantityNurses = int.Parse(txtQuantityNurses.Text);
                 DateTime startVaccionation = DateTime.Parse(txtStartVaccination.Text);
 
-                string totalTimeAttentionString = (DateTime.Parse(txtEndAttention.Text) - DateTime.Parse(txtStartAttention.Text)).ToString(@"hh\ mm\ ");
-                string totalTimeFormat = totalTimeAttentionString.Substring(0, 2) + ":" + totalTimeAttentionString.Substring(3, 2);
-                DateTime totalTimeAttention = DateTime.ParseExact(totalTimeFormat, "HH:mm", null);
+                DateTime totalTimeAttention = vaccinationRecordM.BussinessHours(DateTime.Parse(txtStartAttention.Text), DateTime.Parse(txtEndAttention.Text));
 
                 double formula = TimeSpan.Parse(totalTimeAttention.ToShortTimeString()).TotalMinutes / doseInterval;
                 //PRUEBAS.Text = totalTimeAttention.ToShortTimeString() + "Vacunas: "+ formula.ToString();
@@ -49,7 +47,8 @@ namespace Proyecto_RegistroVacunas
                         doseTime = TimeSpan.FromMinutes(doseInterval),
                         nursesQuantity = (byte)quantityNurses,
                         startDate = startVaccionation,
-                        businessHours = TimeSpan.Parse(totalTimeAttention.ToShortTimeString()),
+                        startAttention = TimeSpan.Parse(txtStartAttention.Text),
+                        endAttention = TimeSpan.Parse(txtEndAttention.Text),
                         UserID = 1 //Administrador
                     };
                     vaccinationRecordM.Save(vaccionationRecord);

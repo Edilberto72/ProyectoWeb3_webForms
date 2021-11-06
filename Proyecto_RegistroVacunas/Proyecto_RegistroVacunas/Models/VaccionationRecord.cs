@@ -25,7 +25,8 @@ namespace Proyecto_RegistroVacunas.Models
         public System.TimeSpan doseTime { get; set; }
         public byte nursesQuantity { get; set; }
         public System.DateTime startDate { get; set; }
-        public System.TimeSpan businessHours { get; set; }
+        public System.TimeSpan startAttention { get; set; }
+        public System.TimeSpan endAttention { get; set; }
         public int UserID { get; set; }
     
         public virtual User User { get; set; }
