@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_RegistroVacunas.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,9 @@ namespace Proyecto_RegistroVacunas
 {
     public partial class RegisterVaccinations : System.Web.UI.Page
     {
+
+        VaccinationRecordModel vaccinationRecordM = new VaccinationRecordModel();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -16,30 +20,45 @@ namespace Proyecto_RegistroVacunas
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            //Formula: 
-            //Se debe restar Horario de Atencion(Final - Inicio)
-            //Luego convertir el resultado a minutos * 60
-            //se divide entre el intervalo para aplicar la dosis
-            int vaccionationsQuantity = int.Parse(txtQuantityVaccionations.Text);
-            int doseInterval = int.Parse(txtDoseTime.Text);
-            int quantityNurses = int.Parse(txtQuantityNurses.Text);
-            DateTime startVaccionation = DateTime.Parse(txtStartVaccination.Text);
-
-            string totalTimeAttentionString =(DateTime.Parse(txtEndAttention.Text) - DateTime.Parse(txtStartAttention.Text)).ToString(@"hh\ mm\ ");
-            string totalTimeFormat = totalTimeAttentionString.Substring(0,2) + ":" + totalTimeAttentionString.Substring(3,2);
-            DateTime totalTimeAttention = DateTime.ParseExact(totalTimeFormat, "HH:mm", null);
-
-            double formula = TimeSpan.Parse(totalTimeAttention.ToShortTimeString()).TotalMinutes / doseInterval;
-            //PRUEBAS.Text = totalTimeAttention.ToShortTimeString() + "Vacunas: "+ formula.ToString();
-
-            //Para verificar que los horarios no sobrepasen a las vacunas
-            //El resultado se multiplica por la cantidad de enfermeras disponibles
-            if ((formula*quantityNurses) < vaccionationsQuantity)
+            try
             {
-                //Es correcto no sobrepasa
+                //Formula: 
+                //Se debe restar Horario de Atencion(Final - Inicio)
+                //Luego convertir el resultado a minutos * 60
+                //se divide entre el intervalo para aplicar la dosis
+                int vaccionationsQuantity = int.Parse(txtQuantityVaccionations.Text);
+                int doseInterval = int.Parse(txtDoseTime.Text);
+                int quantityNurses = int.Parse(txtQuantityNurses.Text);
+                DateTime startVaccionation = DateTime.Parse(txtStartVaccination.Text);
 
+                string totalTimeAttentionString = (DateTime.Parse(txtEndAttention.Text) - DateTime.Parse(txtStartAttention.Text)).ToString(@"hh\ mm\ ");
+                string totalTimeFormat = totalTimeAttentionString.Substring(0, 2) + ":" + totalTimeAttentionString.Substring(3, 2);
+                DateTime totalTimeAttention = DateTime.ParseExact(totalTimeFormat, "HH:mm", null);
+
+                double formula = TimeSpan.Parse(totalTimeAttention.ToShortTimeString()).TotalMinutes / doseInterval;
+                //PRUEBAS.Text = totalTimeAttention.ToShortTimeString() + "Vacunas: "+ formula.ToString();
+
+                //Para verificar que los horarios no sobrepasen a las vacunas
+                //El resultado se multiplica por la cantidad de enfermeras disponibles
+                if ((formula * quantityNurses) < vaccionationsQuantity)
+                {
+                    //Es correcto no sobrepasa
+                    VaccionationRecord vaccionationRecord = new VaccionationRecord()
+                    {
+                        vaccineQuantity = vaccionationsQuantity,
+                        doseTime = TimeSpan.FromMinutes(doseInterval),
+                        nursesQuantity = (byte)quantityNurses,
+                        startDate = startVaccionation,
+                        businessHours = TimeSpan.Parse(totalTimeAttention.ToShortTimeString()),
+                        UserID = 1 //Administrador
+                    };
+                    vaccinationRecordM.Save(vaccionationRecord);
+                }
             }
-
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert("+ex.Message+");</script>");
+            }
         }
     }
 }

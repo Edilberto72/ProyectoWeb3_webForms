@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBVaccineControlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="secondLastName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userType" Type="Byte" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vaccinated" Type="Byte" Nullable="false" />
+    <Property Name="state" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="VaccinationAppointment" Relationship="Self.FK_VaccinationAppointment_User" FromRole="User" ToRole="VaccinationAppointment" />
+    <NavigationProperty Name="VaccionationRecord" Relationship="Self.FK_VaccionationRecord_User" FromRole="User" ToRole="VaccionationRecord" />
+  </EntityType>
+  <EntityType Name="VaccinationAppointment">
+    <Key>
+      <PropertyRef Name="VaccionationRecordID" />
+    </Key>
+    <Property Name="VaccionationRecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="expiration" Type="Byte" Nullable="false" />
+    <Property Name="vaccinationDay" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_VaccinationAppointment_User" FromRole="VaccinationAppointment" ToRole="User" />
+  </EntityType>
+  <EntityType Name="VaccinationSchedule">
+    <Key>
+      <PropertyRef Name="VaccinationScheduleID" />
+    </Key>
+    <Property Name="VaccinationScheduleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vaccinesAvailable" Type="Byte" Nullable="false" />
+    <Property Name="VaccionationRecordID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="VaccionationRecord" Relationship="Self.FK_VaccinationSchedule_VaccionationRecord" FromRole="VaccinationSchedule" ToRole="VaccionationRecord" />
+  </EntityType>
+  <EntityType Name="VaccionationRecord">
+    <Key>
+      <PropertyRef Name="VaccionationRecordID" />
+    </Key>
+    <Property Name="VaccionationRecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vaccineQuantity" Type="Int32" Nullable="false" />
+    <Property Name="doseTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="nursesQuantity" Type="Byte" Nullable="false" />
+    <Property Name="startDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="businessHours" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_VaccionationRecord_User" FromRole="VaccionationRecord" ToRole="User" />
+    <NavigationProperty Name="VaccinationSchedule" Relationship="Self.FK_VaccinationSchedule_VaccionationRecord" FromRole="VaccionationRecord" ToRole="VaccinationSchedule" />
+  </EntityType>
+  <Association Name="FK_VaccinationAppointment_User">
+    <End Role="User" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VaccinationAppointment" Type="Self.VaccinationAppointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="VaccinationAppointment">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VaccionationRecord_User">
+    <End Role="User" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VaccionationRecord" Type="Self.VaccionationRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="VaccionationRecord">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VaccinationSchedule_VaccionationRecord">
+    <End Role="VaccionationRecord" Type="Self.VaccionationRecord" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VaccinationSchedule" Type="Self.VaccinationSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VaccionationRecord">
+        <PropertyRef Name="VaccionationRecordID" />
+      </Principal>
+      <Dependent Role="VaccinationSchedule">
+        <PropertyRef Name="VaccionationRecordID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBVaccineControlEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="User" EntityType="Self.User" />
+    <EntitySet Name="VaccinationAppointment" EntityType="Self.VaccinationAppointment" />
+    <EntitySet Name="VaccinationSchedule" EntityType="Self.VaccinationSchedule" />
+    <EntitySet Name="VaccionationRecord" EntityType="Self.VaccionationRecord" />
+    <AssociationSet Name="FK_VaccinationAppointment_User" Association="Self.FK_VaccinationAppointment_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="VaccinationAppointment" EntitySet="VaccinationAppointment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VaccionationRecord_User" Association="Self.FK_VaccionationRecord_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="VaccionationRecord" EntitySet="VaccionationRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VaccinationSchedule_VaccionationRecord" Association="Self.FK_VaccinationSchedule_VaccionationRecord">
+      <End Role="VaccionationRecord" EntitySet="VaccionationRecord" />
+      <End Role="VaccinationSchedule" EntitySet="VaccinationSchedule" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

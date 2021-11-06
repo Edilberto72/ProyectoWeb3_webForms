@@ -57,3 +57,7 @@ D:\Jhonatan\PROG_WEB_3\Proyecto_WebForms\Proyecto_RegistroVacunas\Proyecto_Regis
 D:\Jhonatan\PROG_WEB_3\Proyecto_WebForms\Proyecto_RegistroVacunas\Proyecto_RegistroVacunas\obj\Debug\Proyecto_RegistroVacunas.csproj.CopyComplete
 D:\Jhonatan\PROG_WEB_3\Proyecto_WebForms\Proyecto_RegistroVacunas\Proyecto_RegistroVacunas\obj\Debug\Proyecto_RegistroVacunas.dll
 D:\Jhonatan\PROG_WEB_3\Proyecto_WebForms\Proyecto_RegistroVacunas\Proyecto_RegistroVacunas\obj\Debug\Proyecto_RegistroVacunas.pdb
+D:\Jhonatan\PROG_WEB_3\Proyecto_WebForms\Proyecto_RegistroVacunas\Proyecto_RegistroVacunas\bin\EntityFramework.dll
+D:\Jhonatan\PROG_WEB_3\Proyecto_WebForms\Proyecto_RegistroVacunas\Proyecto_RegistroVacunas\bin\EntityFramework.SqlServer.dll
+D:\Jhonatan\PROG_WEB_3\Proyecto_WebForms\Proyecto_RegistroVacunas\Proyecto_RegistroVacunas\bin\EntityFramework.xml
+D:\Jhonatan\PROG_WEB_3\Proyecto_WebForms\Proyecto_RegistroVacunas\Proyecto_RegistroVacunas\bin\EntityFramework.SqlServer.xml
