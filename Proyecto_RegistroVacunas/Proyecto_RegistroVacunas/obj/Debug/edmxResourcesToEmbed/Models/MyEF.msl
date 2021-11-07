@@ -25,18 +25,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="VaccinationSchedule">
-      <EntityTypeMapping TypeName="DBVaccineControlModel.VaccinationSchedule">
-        <MappingFragment StoreEntitySet="VaccinationSchedule">
-          <ScalarProperty Name="VaccinationScheduleID" ColumnName="VaccinationScheduleID" />
-          <ScalarProperty Name="vaccinesAvailable" ColumnName="vaccinesAvailable" />
-          <ScalarProperty Name="VaccionationRecordID" ColumnName="VaccionationRecordID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="VaccionationRecord">
-      <EntityTypeMapping TypeName="DBVaccineControlModel.VaccionationRecord">
-        <MappingFragment StoreEntitySet="VaccionationRecord">
+    <EntitySetMapping Name="VaccinationRecord">
+      <EntityTypeMapping TypeName="DBVaccineControlModel.VaccinationRecord">
+        <MappingFragment StoreEntitySet="VaccinationRecord">
           <ScalarProperty Name="VaccionationRecordID" ColumnName="VaccionationRecordID" />
           <ScalarProperty Name="vaccineQuantity" ColumnName="vaccineQuantity" />
           <ScalarProperty Name="doseTime" ColumnName="doseTime" />
@@ -45,6 +36,16 @@
           <ScalarProperty Name="startAttention" ColumnName="startAttention" />
           <ScalarProperty Name="endAttention" ColumnName="endAttention" />
           <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VaccinationSchedule">
+      <EntityTypeMapping TypeName="DBVaccineControlModel.VaccinationSchedule">
+        <MappingFragment StoreEntitySet="VaccinationSchedule">
+          <ScalarProperty Name="VaccinationScheduleID" ColumnName="VaccinationScheduleID" />
+          <ScalarProperty Name="appointment" ColumnName="appointment" />
+          <ScalarProperty Name="vaccinesAvailable" ColumnName="vaccinesAvailable" />
+          <ScalarProperty Name="VaccionationRecordID" ColumnName="VaccionationRecordID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

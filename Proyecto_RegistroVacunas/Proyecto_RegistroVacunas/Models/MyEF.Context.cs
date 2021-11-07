@@ -27,7 +27,7 @@ namespace Proyecto_RegistroVacunas.Models
     
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<VaccinationAppointment> VaccinationAppointment { get; set; }
+        public virtual DbSet<VaccinationRecord> VaccinationRecord { get; set; }
         public virtual DbSet<VaccinationSchedule> VaccinationSchedule { get; set; }
-        public virtual DbSet<VaccionationRecord> VaccionationRecord { get; set; }
     }
 }

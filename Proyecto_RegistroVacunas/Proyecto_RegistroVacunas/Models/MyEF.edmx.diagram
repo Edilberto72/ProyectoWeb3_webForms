@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ae836e02a45c45fc864dddde8b5baf35" Name="Diagram1">
+      <Diagram DiagramId="b7f7471203b54bd1bfd480b0c001b4e1" Name="Diagram1">
         <EntityTypeShape EntityType="DBVaccineControlModel.User" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBVaccineControlModel.VaccinationAppointment" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBVaccineControlModel.VaccinationRecord" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DBVaccineControlModel.VaccinationSchedule" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBVaccineControlModel.VaccionationRecord" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
         <AssociationConnector Association="DBVaccineControlModel.FK_VaccinationAppointment_User" ManuallyRouted="false" />
         <AssociationConnector Association="DBVaccineControlModel.FK_VaccionationRecord_User" ManuallyRouted="false" />
         <AssociationConnector Association="DBVaccineControlModel.FK_VaccinationSchedule_VaccionationRecord" ManuallyRouted="false" />

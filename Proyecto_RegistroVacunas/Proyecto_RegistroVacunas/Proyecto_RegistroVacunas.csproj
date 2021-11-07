@@ -103,7 +103,8 @@
     </Compile>
     <Compile Include="Interfaces\IGeneric.cs" />
     <Compile Include="Interfaces\IUser.cs" />
-    <Compile Include="Interfaces\IVaccionationRecord.cs" />
+    <Compile Include="Interfaces\IVaccinationSchedule.cs" />
+    <Compile Include="Interfaces\IVaccinationRecord.cs" />
     <Compile Include="Models\myEF.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,13 +127,14 @@
     <Compile Include="Models\VaccinationAppointment.cs">
       <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\VaccinationRecord.cs">
+      <DependentUpon>myEF.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\VaccinationRecordModel.cs" />
     <Compile Include="Models\VaccinationSchedule.cs">
       <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VaccionationRecord.cs">
-      <DependentUpon>myEF.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\VaccinationScheduleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterVaccinations.aspx.cs">
       <DependentUpon>RegisterVaccinations.aspx</DependentUpon>
