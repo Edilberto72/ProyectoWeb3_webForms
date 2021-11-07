@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Proyecto_RegistroVacunas.Models
 {
-    public class VaccinationRecordModel : IVaccionationRecord
+    public class VaccinationRecordModel : IVaccinationRecord
     {
         public DateTime BussinessHours(DateTime startAttention, DateTime endAttention)
         {
@@ -15,18 +15,18 @@ namespace Proyecto_RegistroVacunas.Models
             return DateTime.ParseExact(totalTimeFormat, "HH:mm", null);
         }
 
-        public void Delete(VaccionationRecord t)
+        public void Delete(VaccinationRecord t)
         {
             throw new NotImplementedException();
         }
 
-        public List<VaccionationRecord> GetAll()
+        public List<VaccinationRecord> GetAll()
         {
             try
             {
                 using (DBVaccineControlEntities context = new DBVaccineControlEntities())
                 {
-                    return context.VaccionationRecord.AsNoTracking().ToList();
+                    return context.VaccinationRecord.AsNoTracking().ToList();
                 }
             }
             catch (Exception ex)
@@ -36,23 +36,48 @@ namespace Proyecto_RegistroVacunas.Models
             }
         }
 
-        public void Save(VaccionationRecord t)
+        public void InsertTransaction(VaccinationRecord vaccinationRecord, List<VaccinationSchedule> listVaccinationSchedules)
         {
-            try
+            using (DBVaccineControlEntities context = new DBVaccineControlEntities())
             {
-                using (DBVaccineControlEntities context = new DBVaccineControlEntities())
+                using (var transaction = context.Database.BeginTransaction())
                 {
-                    context.VaccionationRecord.Add(t);
-                    context.SaveChanges();
+                    try
+                    {
+                        context.VaccinationRecord.Add(vaccinationRecord);
+
+                        context.SaveChanges();
+
+                        for (int i = 0; i < listVaccinationSchedules.Count; i++)
+                        {
+                            listVaccinationSchedules[i].VaccionationRecordID = vaccinationRecord.VaccionationRecordID;
+                            if (listVaccinationSchedules[i].VaccionationRecordID == 0)
+                            {
+                                transaction.Rollback();
+                            }
+
+                            context.VaccinationSchedule.Add(listVaccinationSchedules[i]);
+                        }
+
+                        context.SaveChanges();
+
+                        transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw ex;
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
             }
         }
 
-        public void Update(VaccionationRecord t)
+        public void Save(VaccinationRecord t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(VaccinationRecord t)
         {
             throw new NotImplementedException();
         }

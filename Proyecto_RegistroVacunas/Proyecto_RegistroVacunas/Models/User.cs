@@ -18,7 +18,7 @@ namespace Proyecto_RegistroVacunas.Models
         public User()
         {
             this.VaccinationAppointment = new HashSet<VaccinationAppointment>();
-            this.VaccionationRecord = new HashSet<VaccionationRecord>();
+            this.VaccinationRecord = new HashSet<VaccinationRecord>();
         }
     
         public int UserID { get; set; }
@@ -33,6 +33,6 @@ namespace Proyecto_RegistroVacunas.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VaccinationAppointment> VaccinationAppointment { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VaccionationRecord> VaccionationRecord { get; set; }
+        public virtual ICollection<VaccinationRecord> VaccinationRecord { get; set; }
     }
 }

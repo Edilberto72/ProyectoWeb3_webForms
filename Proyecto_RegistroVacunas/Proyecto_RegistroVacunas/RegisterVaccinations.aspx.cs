@@ -12,6 +12,8 @@ namespace Proyecto_RegistroVacunas
     {
 
         VaccinationRecordModel vaccinationRecordM = new VaccinationRecordModel();
+        List<VaccinationSchedule> listVaccinationSchedules;
+        TimeSpan appointmentSchedule;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -41,7 +43,7 @@ namespace Proyecto_RegistroVacunas
                 if ((formula * quantityNurses) < vaccionationsQuantity)
                 {
                     //Es correcto no sobrepasa
-                    VaccionationRecord vaccionationRecord = new VaccionationRecord()
+                    VaccinationRecord vaccionationRecord = new VaccinationRecord()
                     {
                         vaccineQuantity = vaccionationsQuantity,
                         doseTime = TimeSpan.FromMinutes(doseInterval),
@@ -51,7 +53,21 @@ namespace Proyecto_RegistroVacunas
                         endAttention = TimeSpan.Parse(txtEndAttention.Text),
                         UserID = 1 //Administrador
                     };
-                    vaccinationRecordM.Save(vaccionationRecord);
+
+                    listVaccinationSchedules = new List<VaccinationSchedule>();
+                    appointmentSchedule = vaccionationRecord.startAttention;
+                    for (int i = 0; i < formula; i++)
+                    {
+
+                        listVaccinationSchedules.Add(new VaccinationSchedule()
+                        {
+                            appointment = appointmentSchedule,
+                            vaccinesAvailable = vaccionationRecord.nursesQuantity
+                        });
+                        appointmentSchedule = appointmentSchedule + TimeSpan.FromMinutes(doseInterval);
+                    }
+
+                    vaccinationRecordM.InsertTransaction(vaccionationRecord, listVaccinationSchedules);
                 }
             }
             catch (Exception ex)

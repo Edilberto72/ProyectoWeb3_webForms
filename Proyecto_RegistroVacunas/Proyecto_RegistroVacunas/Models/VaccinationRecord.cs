@@ -12,10 +12,10 @@ namespace Proyecto_RegistroVacunas.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class VaccionationRecord
+    public partial class VaccinationRecord
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public VaccionationRecord()
+        public VaccinationRecord()
         {
             this.VaccinationSchedule = new HashSet<VaccinationSchedule>();
         }

@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_RegistroVacunas.Interfaces
 {
-    interface IVaccionationRecord : IGeneric<VaccionationRecord>
+    interface IVaccinationSchedule : IGeneric<VaccinationSchedule>
     {
-        DateTime BussinessHours(DateTime startAttention, DateTime endAttention);
     }
 }
