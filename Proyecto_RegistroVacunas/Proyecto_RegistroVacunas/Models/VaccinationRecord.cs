@@ -20,7 +20,7 @@ namespace Proyecto_RegistroVacunas.Models
             this.VaccinationSchedule = new HashSet<VaccinationSchedule>();
         }
     
-        public int VaccionationRecordID { get; set; }
+        public int VaccinationRecordID { get; set; }
         public int vaccineQuantity { get; set; }
         public System.TimeSpan doseTime { get; set; }
         public byte nursesQuantity { get; set; }

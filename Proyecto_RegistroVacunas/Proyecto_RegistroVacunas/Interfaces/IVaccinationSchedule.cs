@@ -9,5 +9,8 @@ namespace Proyecto_RegistroVacunas.Interfaces
 {
     interface IVaccinationSchedule : IGeneric<VaccinationSchedule>
     {
+        List<VaccinationSchedule> GetVaccinationSchedule(int recordID);
+
+        VaccinationSchedule GetSchedule(int id);
     }
 }

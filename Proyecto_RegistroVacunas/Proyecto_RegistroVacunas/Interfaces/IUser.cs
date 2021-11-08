@@ -9,5 +9,6 @@ namespace Proyecto_RegistroVacunas.Interfaces
 {
     interface IUser: IGeneric<User>
     {
+        void SaveAppointment(User user, VaccinationAppointment vaccinationAppointment, int scheduleID);
     }
 }

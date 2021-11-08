@@ -50,8 +50,8 @@ namespace Proyecto_RegistroVacunas.Models
 
                         for (int i = 0; i < listVaccinationSchedules.Count; i++)
                         {
-                            listVaccinationSchedules[i].VaccionationRecordID = vaccinationRecord.VaccionationRecordID;
-                            if (listVaccinationSchedules[i].VaccionationRecordID == 0)
+                            listVaccinationSchedules[i].VaccinationRecordID = vaccinationRecord.VaccinationRecordID;
+                            if (listVaccinationSchedules[i].VaccinationRecordID == 0)
                             {
                                 transaction.Rollback();
                             }
