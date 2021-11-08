@@ -15,14 +15,19 @@ namespace Proyecto_RegistroVacunas
         UserModel userModel = new UserModel();
         int userID;
 
+        private void Refresh()
+        {
+            dataVaccineConfirmation.DataSource = vaccinationAppointmentModel.GetAppointment(DateTime.Parse(cmbVaccinationDay.SelectedItem.Text));
+            dataVaccineConfirmation.DataBind();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             cmbVaccinationDay.DataSource = vaccinationRecord.GetAll();
             cmbVaccinationDay.DataTextField = "startDate";
             cmbVaccinationDay.DataValueField = "VaccinationRecordID";
             cmbVaccinationDay.DataBind();
-            dataVaccineConfirmation.DataSource = vaccinationAppointmentModel.GetAppointment(DateTime.Parse(cmbVaccinationDay.SelectedItem.Text));
-            dataVaccineConfirmation.DataBind();
+            Refresh();
             if (IsPostBack)
             {
                 if (Application["userID"] != null)
@@ -40,8 +45,7 @@ namespace Proyecto_RegistroVacunas
 
         protected void cmbVaccinationDay_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dataVaccineConfirmation.DataSource = vaccinationAppointmentModel.GetAppointment(DateTime.Parse(cmbVaccinationDay.SelectedItem.Text));
-            dataVaccineConfirmation.DataBind();
+            Refresh();
         }
 
         protected void btnVaccinationRegister_Click(object sender, EventArgs e)
@@ -52,6 +56,7 @@ namespace Proyecto_RegistroVacunas
                 {
                     userModel.UpdateVaccinated(userID);
                     //Implementar logica de email
+                    Refresh();
                 }
                 else
                 {

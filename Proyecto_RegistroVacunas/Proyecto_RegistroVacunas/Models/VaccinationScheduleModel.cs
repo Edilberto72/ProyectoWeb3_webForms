@@ -32,7 +32,7 @@ namespace Proyecto_RegistroVacunas.Models
             using (DBVaccineControlEntities context = new DBVaccineControlEntities())
             {
                 return context.VaccinationSchedule.AsNoTracking()
-                    .Where(x => x.VaccinationRecordID == recordID).ToList();
+                    .Where(x => x.VaccinationRecordID == recordID && x.vaccinesAvailable > 0).ToList();
             }
         }
 

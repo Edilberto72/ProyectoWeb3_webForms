@@ -34,6 +34,6 @@
         <br />
         <asp:Button ID="btnRegister" runat="server" Text="Registrar cita" OnClick="btnRegister_Click" />
 
-        <asp:TextBox ID="appointment" Text="" runat="server" />
+        <asp:TextBox ID="txtPrueba" Text="" runat="server" />
     </form>
 </asp:Content>
