@@ -89,6 +89,7 @@
     </Content>
     <Content Include="RegisterAppointmentTime.aspx" />
     <Content Include="RegisterVaccinations.aspx" />
+    <Content Include="VaccineConfirmation.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -124,9 +125,11 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserAppointment.cs" />
     <Compile Include="Models\VaccinationAppointment.cs">
       <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\VaccinationAppointmentModel.cs" />
     <Compile Include="Models\VaccinationRecord.cs">
       <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
@@ -157,6 +160,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="VaccineConfirmation.aspx.cs">
+      <DependentUpon>VaccineConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VaccineConfirmation.aspx.designer.cs">
+      <DependentUpon>VaccineConfirmation.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
