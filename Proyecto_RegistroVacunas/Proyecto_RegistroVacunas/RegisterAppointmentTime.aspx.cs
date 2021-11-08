@@ -18,14 +18,19 @@ namespace Proyecto_RegistroVacunas
         DateTime vaccinationDayDate;
         int vaccinationScheduleID;
 
+        private void Refresh()
+        {
+            dataVaccinationSchedule.DataSource = vaccinationSchedule.GetVaccinationSchedule(int.Parse(cmbDate.SelectedItem.Value));
+            dataVaccinationSchedule.DataBind();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             cmbDate.DataSource = vaccinationRecord.GetAll();
             cmbDate.DataTextField = "startDate";
             cmbDate.DataValueField = "VaccinationRecordID";
             cmbDate.DataBind();
-            dataVaccinationSchedule.DataSource = vaccinationSchedule.GetVaccinationSchedule(int.Parse(cmbDate.SelectedItem.Value));
-            dataVaccinationSchedule.DataBind();
+            Refresh();
             if (IsPostBack)
             {
                 if (Application["ID"] != null)
@@ -37,6 +42,7 @@ namespace Proyecto_RegistroVacunas
 
         protected void dataVaccinationSchedule_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtPrueba.Text = dataVaccinationSchedule.SelectedRow.Cells[2].Text;
             Application["ID"] = int.Parse(dataVaccinationSchedule.SelectedRow.Cells[1].Text);
         }
 
@@ -69,7 +75,7 @@ namespace Proyecto_RegistroVacunas
                     };
                     userModel.SaveAppointment(user, vaccinationAppointment, vaccinationScheduleID);
                     vaccinationScheduleID = 0;
-                    //Post. No se actualiza la lista debido a que el ispost no tiene el metodo select vuelto a cargar
+                    Refresh();
                 }
                 else
                 {
@@ -85,8 +91,8 @@ namespace Proyecto_RegistroVacunas
 
         protected void cmbDate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dataVaccinationSchedule.DataSource = vaccinationSchedule.GetVaccinationSchedule(cmbDate.SelectedIndex);
-            dataVaccinationSchedule.DataBind();
+            //antes estaba con cmbDate.SelectedIndex
+            Refresh();
         }
     }
 }
