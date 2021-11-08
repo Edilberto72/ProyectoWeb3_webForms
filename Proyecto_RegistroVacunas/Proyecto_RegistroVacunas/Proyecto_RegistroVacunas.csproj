@@ -87,6 +87,7 @@
       <DependentUpon>myEF.edmx</DependentUpon>
       <LastGenOutput>myEF.cs</LastGenOutput>
     </Content>
+    <Content Include="RegisterAppointmentTime.aspx" />
     <Content Include="RegisterVaccinations.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -123,17 +124,24 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\VaccinationAppointment.cs">
       <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VaccinationRecord.cs">
       <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VaccinationRecordModel.cs" />
     <Compile Include="Models\VaccinationSchedule.cs">
       <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
+    <Compile Include="RegisterAppointmentTime.aspx.cs">
+      <DependentUpon>RegisterAppointmentTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterAppointmentTime.aspx.designer.cs">
+      <DependentUpon>RegisterAppointmentTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\VaccinationRecordModel.cs" />
     <Compile Include="Models\VaccinationScheduleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterVaccinations.aspx.cs">

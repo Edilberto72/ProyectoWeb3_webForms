@@ -45,6 +45,45 @@ namespace Proyecto_RegistroVacunas.Models
             }
         }
 
+        public void SaveAppointment(User user, VaccinationAppointment vaccinationAppointment, int scheduleID)
+        {
+            using (DBVaccineControlEntities context = new DBVaccineControlEntities())
+            {
+                using (var transaction = context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        context.User.Add(user);
+                        context.SaveChanges();
+
+                        vaccinationAppointment.UserID = user.UserID;
+                        if (vaccinationAppointment.UserID == 0)
+                        {
+                            transaction.Rollback();
+                        }
+
+                        context.VaccinationAppointment.Add(vaccinationAppointment);
+
+                        VaccinationSchedule vaccinationSchedule = context.VaccinationSchedule
+                            .SingleOrDefault(x => x.VaccinationScheduleID == scheduleID);
+                        if (vaccinationSchedule == null)
+                        {
+                            transaction.Rollback();
+                        }
+                        vaccinationSchedule.vaccinesAvailable = (byte)(vaccinationSchedule.vaccinesAvailable - 1);
+                        context.SaveChanges();
+
+                        transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw ex;
+                    }
+                }
+            }
+        }
+
         public void Update(User t)
         {
             throw new NotImplementedException();

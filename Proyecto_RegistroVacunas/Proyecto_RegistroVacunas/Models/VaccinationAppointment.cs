@@ -14,7 +14,7 @@ namespace Proyecto_RegistroVacunas.Models
     
     public partial class VaccinationAppointment
     {
-        public int VaccionationRecordID { get; set; }
+        public int VaccinationRecordID { get; set; }
         public byte expiration { get; set; }
         public System.DateTime vaccinationDay { get; set; }
         public int UserID { get; set; }

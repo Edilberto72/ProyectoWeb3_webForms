@@ -17,7 +17,7 @@ namespace Proyecto_RegistroVacunas.Models
         public int VaccinationScheduleID { get; set; }
         public System.TimeSpan appointment { get; set; }
         public byte vaccinesAvailable { get; set; }
-        public int VaccionationRecordID { get; set; }
+        public int VaccinationRecordID { get; set; }
     
         public virtual VaccinationRecord VaccinationRecord { get; set; }
     }

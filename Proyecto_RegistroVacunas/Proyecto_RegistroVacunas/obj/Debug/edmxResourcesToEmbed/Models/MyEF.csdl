@@ -17,9 +17,9 @@
   </EntityType>
   <EntityType Name="VaccinationAppointment">
     <Key>
-      <PropertyRef Name="VaccionationRecordID" />
+      <PropertyRef Name="VaccinationRecordID" />
     </Key>
-    <Property Name="VaccionationRecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VaccinationRecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="expiration" Type="Byte" Nullable="false" />
     <Property Name="vaccinationDay" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="UserID" Type="Int32" Nullable="false" />
@@ -27,13 +27,13 @@
   </EntityType>
   <EntityType Name="VaccinationRecord">
     <Key>
-      <PropertyRef Name="VaccionationRecordID" />
+      <PropertyRef Name="VaccinationRecordID" />
     </Key>
-    <Property Name="VaccionationRecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VaccinationRecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="vaccineQuantity" Type="Int32" Nullable="false" />
     <Property Name="doseTime" Type="Time" Nullable="false" Precision="0" />
     <Property Name="nursesQuantity" Type="Byte" Nullable="false" />
-    <Property Name="startDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="startDate" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="startAttention" Type="Time" Nullable="false" Precision="0" />
     <Property Name="endAttention" Type="Time" Nullable="false" Precision="0" />
     <Property Name="UserID" Type="Int32" Nullable="false" />
@@ -47,7 +47,7 @@
     <Property Name="VaccinationScheduleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="appointment" Type="Time" Nullable="false" Precision="0" />
     <Property Name="vaccinesAvailable" Type="Byte" Nullable="false" />
-    <Property Name="VaccionationRecordID" Type="Int32" Nullable="false" />
+    <Property Name="VaccinationRecordID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="VaccinationRecord" Relationship="Self.FK_VaccinationSchedule_VaccionationRecord" FromRole="VaccinationSchedule" ToRole="VaccinationRecord" />
   </EntityType>
   <Association Name="FK_VaccinationAppointment_User">
@@ -85,10 +85,10 @@
     <End Role="VaccinationSchedule" Type="Self.VaccinationSchedule" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="VaccinationRecord">
-        <PropertyRef Name="VaccionationRecordID" />
+        <PropertyRef Name="VaccinationRecordID" />
       </Principal>
       <Dependent Role="VaccinationSchedule">
-        <PropertyRef Name="VaccionationRecordID" />
+        <PropertyRef Name="VaccinationRecordID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
