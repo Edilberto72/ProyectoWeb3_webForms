@@ -26,17 +26,20 @@ namespace Proyecto_RegistroVacunas
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            cmbDate.DataSource = vaccinationRecord.GetAll();
-            cmbDate.DataTextField = "startDate";
-            cmbDate.DataValueField = "VaccinationRecordID";
-            cmbDate.DataBind();
-            Refresh();
             if (IsPostBack)
             {
                 if (Application["ID"] != null)
                 {
                     vaccinationScheduleID = (int)Application["ID"];
                 }
+            }
+            else
+            {
+                cmbDate.DataSource = vaccinationRecord.GetAll();
+                cmbDate.DataTextField = "startDate";
+                cmbDate.DataValueField = "VaccinationRecordID";
+                cmbDate.DataBind();
+                Refresh();
             }
         }
 
