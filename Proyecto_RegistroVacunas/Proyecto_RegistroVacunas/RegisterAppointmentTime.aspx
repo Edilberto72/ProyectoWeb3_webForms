@@ -21,7 +21,7 @@
                 <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
             </div>
             <section id="listVaccinationSchedule">
-                <asp:DropDownList ID="cmbDate" runat="server" OnSelectedIndexChanged="cmbDate_SelectedIndexChanged">
+                <asp:DropDownList ID="cmbDate" runat="server" OnSelectedIndexChanged="cmbDate_SelectedIndexChanged" AutoPostBack="True">
                 </asp:DropDownList>
                 <br />
                 <asp:GridView ID="dataVaccinationSchedule" AllowPaging="true" PageSize="20" runat="server" OnSelectedIndexChanged="dataVaccinationSchedule_SelectedIndexChanged" OnPageIndexChanging="dataVaccinationSchedule_PageIndexChanging" >

@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
-        <asp:DropDownList ID="cmbVaccinationDay" runat="server" OnSelectedIndexChanged="cmbVaccinationDay_SelectedIndexChanged"></asp:DropDownList>
+        <asp:DropDownList ID="cmbVaccinationDay" runat="server" OnSelectedIndexChanged="cmbVaccinationDay_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
         <br />
         <asp:GridView ID="dataVaccineConfirmation" runat="server" OnSelectedIndexChanged="dataVaccineConfirmation_SelectedIndexChanged">
             <columns>
