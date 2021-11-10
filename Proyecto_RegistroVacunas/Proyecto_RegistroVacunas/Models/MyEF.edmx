@@ -15,6 +15,7 @@
           <Property Name="secondLastName" Type="varchar" MaxLength="40" Nullable="false" />
           <Property Name="userType" Type="tinyint" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" />
           <Property Name="vaccinated" Type="tinyint" Nullable="false" />
           <Property Name="state" Type="tinyint" Nullable="false" />
         </EntityType>
@@ -124,6 +125,7 @@
           <Property Name="secondLastName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="userType" Type="Byte" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="vaccinated" Type="Byte" Nullable="false" />
           <Property Name="state" Type="Byte" Nullable="false" />
           <NavigationProperty Name="VaccinationAppointment" Relationship="Self.FK_VaccinationAppointment_User" FromRole="User" ToRole="VaccinationAppointment" />
@@ -239,6 +241,7 @@
                 <ScalarProperty Name="secondLastName" ColumnName="secondLastName" />
                 <ScalarProperty Name="userType" ColumnName="userType" />
                 <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="vaccinated" ColumnName="vaccinated" />
                 <ScalarProperty Name="state" ColumnName="state" />
               </MappingFragment>

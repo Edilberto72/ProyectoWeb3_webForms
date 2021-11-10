@@ -10,6 +10,7 @@
           <ScalarProperty Name="secondLastName" ColumnName="secondLastName" />
           <ScalarProperty Name="userType" ColumnName="userType" />
           <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
           <ScalarProperty Name="vaccinated" ColumnName="vaccinated" />
           <ScalarProperty Name="state" ColumnName="state" />
         </MappingFragment>

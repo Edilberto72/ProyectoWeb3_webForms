@@ -10,6 +10,7 @@
     <Property Name="secondLastName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="userType" Type="Byte" Nullable="false" />
     <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="vaccinated" Type="Byte" Nullable="false" />
     <Property Name="state" Type="Byte" Nullable="false" />
     <NavigationProperty Name="VaccinationAppointment" Relationship="Self.FK_VaccinationAppointment_User" FromRole="User" ToRole="VaccinationAppointment" />

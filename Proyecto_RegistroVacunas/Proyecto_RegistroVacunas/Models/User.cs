@@ -27,6 +27,7 @@ namespace Proyecto_RegistroVacunas.Models
         public string secondLastName { get; set; }
         public byte userType { get; set; }
         public string email { get; set; }
+        public string password { get; set; }
         public byte vaccinated { get; set; }
         public byte state { get; set; }
     

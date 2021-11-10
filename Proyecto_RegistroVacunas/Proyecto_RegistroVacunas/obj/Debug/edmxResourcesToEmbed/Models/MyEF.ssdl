@@ -10,6 +10,7 @@
     <Property Name="secondLastName" Type="varchar" MaxLength="40" Nullable="false" />
     <Property Name="userType" Type="tinyint" Nullable="false" />
     <Property Name="email" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
     <Property Name="vaccinated" Type="tinyint" Nullable="false" />
     <Property Name="state" Type="tinyint" Nullable="false" />
   </EntityType>
