@@ -1,7 +1,6 @@
 #bin, obj y .vs
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/*
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/bin/*
-Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.edmx.diagram
 Proyecto_RegistroVacunas/.vs/*
 
 #Entity Framework
