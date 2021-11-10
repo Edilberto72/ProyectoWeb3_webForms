@@ -1,5 +1,19 @@
-#Entity Framework
+#bin, obj y .vs
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/*
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/bin/*
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.edmx.diagram
 Proyecto_RegistroVacunas/.vs/*
+
+#Entity Framework
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Web.config
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/MyEF.Context.cs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/MyEF.Context.tt
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/MyEF.cs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/MyEF.Designer.cs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/MyEF.edmx
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/MyEF.edmx.diagram
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/MyEF.tt
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/User.cs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/VaccinationAppointment.cs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/VaccinationRecord.cs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/VaccinationSchedule.cs
