@@ -1,10 +1,18 @@
-#Entity Framework
-Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/Debug/TempPE/Models.MyEF.cs.dll
-Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/Debug/TempPE/Models.MyEF.Designer.cs.dll
-Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/Debug/Proyecto_RegistroVacunas.pdb
-Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/Debug/Proyecto_RegistroVacunas.dll
-Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/bin/Proyecto_RegistroVacunas.pdb
-Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/bin/Proyecto_RegistroVacunas.dll
+#bin, obj y .vs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/*
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/bin/*
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.edmx.diagram
-Proyecto_RegistroVacunas/.vs/Proyecto_RegistroVacunas/v16/.suo
+Proyecto_RegistroVacunas/.vs/*
 
+#Entity Framework
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.Context.cs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.Context.tt
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.cs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.Designer.cs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.edmx
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.edmx.diagram
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.tt
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/User.cs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/VaccinationAppointment.cs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/VaccinationRecord.cs
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/VaccinationSchedule.cs
