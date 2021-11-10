@@ -3,6 +3,7 @@ Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/*
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/bin/*
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.edmx.diagram
 Proyecto_RegistroVacunas/.vs/*
+Proyecto_RegistroVacunas/.vs/Proyecto_RegistroVacunas/v16/.suo
 
 #Entity Framework
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.Context.cs
