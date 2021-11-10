@@ -5,7 +5,6 @@ Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.edmx.diagram
 Proyecto_RegistroVacunas/.vs/*
 
 #Entity Framework
-Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Web.config
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.Context.cs
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.Context.tt
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.cs
