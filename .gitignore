@@ -1,10 +1,7 @@
 #Entity Framework
-Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/Debug/TempPE/Models.MyEF.cs.dll
-Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/Debug/TempPE/Models.MyEF.Designer.cs.dll
-Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/Debug/Proyecto_RegistroVacunas.pdb
-Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/Debug/Proyecto_RegistroVacunas.dll
+Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/obj/*
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/bin/Proyecto_RegistroVacunas.pdb
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/bin/Proyecto_RegistroVacunas.dll
 Proyecto_RegistroVacunas/Proyecto_RegistroVacunas/Models/MyEF.edmx.diagram
 Proyecto_RegistroVacunas/.vs/Proyecto_RegistroVacunas/v16/.suo
-
+Proyecto_RegistroVacunas/.vs
