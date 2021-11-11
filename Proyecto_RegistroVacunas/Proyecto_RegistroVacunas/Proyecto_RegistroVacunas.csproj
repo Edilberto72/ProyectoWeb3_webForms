@@ -87,6 +87,7 @@
       <DependentUpon>myEF.edmx</DependentUpon>
       <LastGenOutput>myEF.cs</LastGenOutput>
     </Content>
+    <Content Include="PersonalLogin.aspx" />
     <Content Include="RegisterAppointmentTime.aspx" />
     <Content Include="RegisterVaccinations.aspx" />
     <Content Include="VaccineConfirmation.aspx" />
@@ -135,6 +136,13 @@
     </Compile>
     <Compile Include="Models\VaccinationSchedule.cs">
       <DependentUpon>myEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalLogin.aspx.cs">
+      <DependentUpon>PersonalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalLogin.aspx.designer.cs">
+      <DependentUpon>PersonalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegisterAppointmentTime.aspx.cs">
       <DependentUpon>RegisterAppointmentTime.aspx</DependentUpon>
