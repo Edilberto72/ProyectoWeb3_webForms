@@ -50,7 +50,7 @@ namespace Proyecto_RegistroVacunas.Services
             // se lo obtiene con Server.MapPath y colocando el nombre del archivo entr los parentesis
             // pero solo se puede usar ese metodo desde un .aspx.cs
             // por lo que el path se recibira como argumento
-
+            /*
             PdfDocument document = new PdfDocument();
             PdfPage page = document.AddPage();
             page.Size = PageSize.A4;
@@ -84,7 +84,7 @@ namespace Proyecto_RegistroVacunas.Services
             smtp.Port = 587;
             smtp.Credentials = new NetworkCredential(SenderEmail, SenderPassword);
             smtp.EnableSsl = true;
-            smtp.Send(msg);
+            smtp.Send(msg);*/
         }
     }
 }

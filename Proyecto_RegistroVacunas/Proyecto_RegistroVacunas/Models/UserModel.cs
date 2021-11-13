@@ -102,19 +102,6 @@ namespace Proyecto_RegistroVacunas.Models
                 context.SaveChanges();
             }
         }
-        public void UpdateVaccinated(int userID)
-        {
-            using (DBVaccineControlEntities context = new DBVaccineControlEntities())
-            {
-                User user = context.User.Where(x => x.UserID == userID).FirstOrDefault();
-                if (user == null)
-                {
-                    return;
-                }
-                user.vaccinated = 1;
-                context.SaveChanges();
-            }
-        }
 
         public bool EmailAlreadyExists(string email)
         {
