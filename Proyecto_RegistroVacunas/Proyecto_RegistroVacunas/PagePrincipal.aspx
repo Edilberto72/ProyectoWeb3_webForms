@@ -8,6 +8,7 @@
         <header>
             <asp:Label ID="Label1" runat="server" Text="Hospital Centinela"></asp:Label>
             <asp:Button ID="btnPersonalLogin" runat="server" Text="Inicio de Sesion Personal" OnClick="btnPersonalLogin_Click" />
+            <asp:Button ID="Button4" runat="server" Text="Button" />
         </header>
 
         <section>
@@ -21,7 +22,7 @@
 
             <div class="LocationContainer">
                 <asp:Label ID="Label3" runat="server" Text="Nuestra Ubicacion"></asp:Label><br />
-                <asp:Button ID="btnLocation" runat="server" Text="Hospital Centinela - Cochabamba" OnClick="btnLocation_Click" />
+                <asp:Button ID="btnLocation" runat="server" Text="Hospital Centinela - Cochabamba" OnClick="btnLocation_Click" Width="365px" />
             </div>
             
             <div class="ContactNumberContainer">
