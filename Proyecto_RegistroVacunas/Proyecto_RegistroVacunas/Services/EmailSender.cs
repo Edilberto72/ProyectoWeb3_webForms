@@ -9,7 +9,6 @@ using PdfSharp.Pdf;
 using PdfSharp.Drawing;
 using PdfSharp.Drawing.Layout;
 using Proyecto_RegistroVacunas.Models;
-using iTextSharp.text.pdf;
 
 namespace Proyecto_RegistroVacunas.Services
 {
@@ -22,8 +21,9 @@ namespace Proyecto_RegistroVacunas.Services
         public EmailSender(User addressee)
         {
             Addressee = addressee; // usuario al que se enviará el correo
-            SenderEmail = ""; // correo que hará el envío, el correo debe tener habilitado el uso para aplicaciones no seguras
-            SenderPassword = ""; // contraseña del correo que hacer el envío
+            Addressee.email = "jgpandia1@gmail.com";
+            SenderEmail = "jgpandia1@gmail.com"; // correo que hará el envío, el correo debe tener habilitado el uso para aplicaciones no seguras
+            SenderPassword = "JGPAndia"; // contraseña del correo que hacer el envío
         }
 
         public void SendAppointmentConfirmationEmail()
@@ -50,7 +50,7 @@ namespace Proyecto_RegistroVacunas.Services
             // se lo obtiene con Server.MapPath y colocando el nombre del archivo entr los parentesis
             // pero solo se puede usar ese metodo desde un .aspx.cs
             // por lo que el path se recibira como argumento
-
+            
             PdfDocument document = new PdfDocument();
             PdfPage page = document.AddPage();
             page.Size = PageSize.A4;
