@@ -1,4 +1,5 @@
 ﻿using Proyecto_RegistroVacunas.Models;
+using Proyecto_RegistroVacunas.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Proyecto_RegistroVacunas
     {
         VaccinationAppointmentModel vaccinationAppointmentModel = new VaccinationAppointmentModel();
         VaccinationRecordModel vaccinationRecord = new VaccinationRecordModel();
+        EmailSender emailSenderHelper; 
         UserModel userModel = new UserModel();
         int userID;
 
@@ -57,9 +59,15 @@ namespace Proyecto_RegistroVacunas
             {
                 if (userID != 0)
                 {
-                    userModel.UpdateVaccinated(userID);
-                    //Implementar logica de email
-                    Refresh();
+                    User user = userModel.GetUser(userID);
+                    if (user != null)
+                    {
+                        userModel.UpdateVaccinated(user.UserID);
+
+                        emailSenderHelper = new EmailSender(user);
+                        emailSenderHelper.SendCertificateEmail(Server.MapPath($"~/Certificates/Certificate{user.UserID}.pdf"));
+                        Refresh();
+                    }
                 }
                 else
                 {

@@ -12,10 +12,9 @@ namespace Proyecto_RegistroVacunas.Interfaces
         void SaveAppointment(User user, VaccinationAppointment vaccinationAppointment, int scheduleID);
 
         void UpdateVaccinated(int userID);
-        void SaveAppointment(User user, VaccinationAppointment vaccinationAppointment, int scheduleID);
-
-        void UpdateVaccinated(int userID);
 
         bool EmailAlreadyExists(string email);
+
+        User GetUser(int userID);
     }
 }
