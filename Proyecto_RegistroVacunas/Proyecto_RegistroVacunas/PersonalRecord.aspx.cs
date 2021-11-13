@@ -13,5 +13,10 @@ namespace Proyecto_RegistroVacunas
         {
 
         }
+
+        protected void btnPersonal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

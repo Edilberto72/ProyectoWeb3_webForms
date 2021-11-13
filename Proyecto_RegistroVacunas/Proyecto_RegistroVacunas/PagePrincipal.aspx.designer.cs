@@ -33,22 +33,22 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control PersonalLogin.
+        /// Control btnPersonalLogin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button PersonalLogin;
+        protected global::System.Web.UI.WebControls.Button btnPersonalLogin;
 
         /// <summary>
-        /// Control Button2.
+        /// Control btnRegisterAppointment.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btnRegisterAppointment;
 
         /// <summary>
         /// Control Image1.
