@@ -1,4 +1,5 @@
 ﻿using Proyecto_RegistroVacunas.Interfaces;
+using Proyecto_RegistroVacunas.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,8 @@ namespace Proyecto_RegistroVacunas.Models
 {
     public class UserModel : IUser
     {
+        public EmailSender emailSenderHelper;
+
         public void Delete(User t)
         {
             throw new NotImplementedException();
@@ -61,6 +64,9 @@ namespace Proyecto_RegistroVacunas.Models
                         {
                             transaction.Rollback();
                         }
+
+                        emailSenderHelper = new EmailSender(user);
+                        emailSenderHelper.SendAppointmentConfirmationEmail();
 
                         context.VaccinationAppointment.Add(vaccinationAppointment);
 
@@ -119,7 +125,7 @@ namespace Proyecto_RegistroVacunas.Models
             }
         }
 
-        public void SaveNurse(string email, string name, string lastname = "", string secondlastname = "")
+        public void SaveNurse(string email, string name, string password, string lastname = "", string secondlastname = "")
         {
             try
             {
@@ -130,12 +136,28 @@ namespace Proyecto_RegistroVacunas.Models
                     nurse.lastName = lastname;
                     nurse.secondLastName = secondlastname;
                     nurse.email = email;
+                    nurse.password = password;
                     nurse.userType = 1;
                     nurse.vaccinated = 0;
                     nurse.state = 1;
 
                     context.User.Add(nurse);
                     context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public User GetUser(int userID)
+        {
+            try
+            {
+                using (DBVaccineControlEntities context = new DBVaccineControlEntities())
+                {
+                    return context.User.Where(x => x.UserID == userID).FirstOrDefault();
                 }
             }
             catch (Exception ex)

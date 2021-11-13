@@ -14,5 +14,7 @@ namespace Proyecto_RegistroVacunas.Interfaces
         void UpdateVaccinated(int userID);
 
         bool EmailAlreadyExists(string email);
+
+        User GetUser(int userID);
     }
 }
