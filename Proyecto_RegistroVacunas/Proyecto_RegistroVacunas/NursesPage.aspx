@@ -5,8 +5,8 @@
     <form id="form1" runat="server">
         <header>
             <asp:Label ID="Label1" runat="server" Text="Hospital Centinela"></asp:Label>
-            <asp:Button ID="SignOff" runat="server" Text="Cerrar Sesion" />
-            <asp:Button ID="VaccineRegister" runat="server" Text="Registrar Vacunas" />
+            <asp:Button ID="bynSignOff" runat="server" Text="Cerrar Sesion" OnClick="btnSignOff_Click" />
+            <asp:Button ID="btnVaccineRegister" runat="server" Text="Registrar Vacunas" OnClick="btnVaccineRegister_Click" />
         </header>
 
         <section>
@@ -18,7 +18,7 @@
 
             <div class="LocationContainer">
                 <asp:Label ID="Label2" runat="server" Text="Nuestra Ubicacion"></asp:Label><br />
-                <asp:Button ID="btnLocation" runat="server" Text="Hospital Centinela - Cochabamba" />
+                <asp:Button ID="btnLocation" runat="server" Text="Hospital Centinela - Cochabamba" OnClick="btnLocation_Click" />
             </div>
             
             <div class="ContactNumberContainer">
@@ -28,7 +28,7 @@
             
             <div class="MinistryPageContainer">
                 <asp:Label ID="Label3" runat="server" Text="Pagina del ministerio de Salud"></asp:Label><br />
-                <asp:Button ID="Button1" runat="server" Text="Ministerio de Salud" OnClick="btnHealthMinistryPage_Click" />
+                <asp:Button ID="btnHealthMinistryPage" runat="server" Text="Ministerio de Salud" OnClick="btnHealthMinistryPage_Click" />
             </div>
             
             

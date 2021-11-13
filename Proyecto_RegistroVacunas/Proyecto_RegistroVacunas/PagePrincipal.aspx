@@ -7,11 +7,11 @@
         
         <header>
             <asp:Label ID="Label1" runat="server" Text="Hospital Centinela"></asp:Label>
-            <asp:Button ID="PersonalLogin" runat="server" Text="Inicio de Sesion Personal" />
+            <asp:Button ID="btnPersonalLogin" runat="server" Text="Inicio de Sesion Personal" OnClick="btnPersonalLogin_Click" />
         </header>
 
         <section>
-            <asp:Button ID="Button2" runat="server" Text="Button" />
+            <asp:Button ID="btnRegisterAppointment" runat="server" Text="Registra tu Cita" OnClick="btnRegisterAppointment_Click" />
             <asp:Image ID="Image1" runat="server" />
             <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
         </section>
@@ -21,7 +21,7 @@
 
             <div class="LocationContainer">
                 <asp:Label ID="Label3" runat="server" Text="Nuestra Ubicacion"></asp:Label><br />
-                <asp:Button ID="btnLocation" runat="server" Text="Hospital Centinela - Cochabamba" />
+                <asp:Button ID="btnLocation" runat="server" Text="Hospital Centinela - Cochabamba" OnClick="btnLocation_Click" />
             </div>
             
             <div class="ContactNumberContainer">

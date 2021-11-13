@@ -33,22 +33,22 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control SignOff.
+        /// Control bynSignOff.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SignOff;
+        protected global::System.Web.UI.WebControls.Button bynSignOff;
 
         /// <summary>
-        /// Control VaccineRegister.
+        /// Control btnVaccineRegister.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button VaccineRegister;
+        protected global::System.Web.UI.WebControls.Button btnVaccineRegister;
 
         /// <summary>
         /// Control Image1.
@@ -105,12 +105,12 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Control Button1.
+        /// Control btnHealthMinistryPage.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnHealthMinistryPage;
     }
 }
