@@ -99,7 +99,10 @@
       <DependentUpon>myEF.edmx</DependentUpon>
       <LastGenOutput>myEF.cs</LastGenOutput>
     </Content>
+    <Content Include="NursesPage.aspx" />
+    <Content Include="PagePrincipal.aspx" />
     <Content Include="PersonalLogin.aspx" />
+    <Content Include="PersonalRecord.aspx" />
     <Content Include="RegisterAppointmentTime.aspx" />
     <Content Include="RegisterVaccinations.aspx" />
     <Content Include="VaccineConfirmation.aspx" />
@@ -149,12 +152,33 @@
     <Compile Include="Models\VaccinationSchedule.cs">
       <DependentUpon>myEF.tt</DependentUpon>
     </Compile>
+    <Compile Include="NursesPage.aspx.cs">
+      <DependentUpon>NursesPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NursesPage.aspx.designer.cs">
+      <DependentUpon>NursesPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagePrincipal.aspx.cs">
+      <DependentUpon>PagePrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagePrincipal.aspx.designer.cs">
+      <DependentUpon>PagePrincipal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PersonalLogin.aspx.cs">
       <DependentUpon>PersonalLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PersonalLogin.aspx.designer.cs">
       <DependentUpon>PersonalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalRecord.aspx.cs">
+      <DependentUpon>PersonalRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalRecord.aspx.designer.cs">
+      <DependentUpon>PersonalRecord.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegisterAppointmentTime.aspx.cs">
       <DependentUpon>RegisterAppointmentTime.aspx</DependentUpon>
@@ -209,6 +233,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

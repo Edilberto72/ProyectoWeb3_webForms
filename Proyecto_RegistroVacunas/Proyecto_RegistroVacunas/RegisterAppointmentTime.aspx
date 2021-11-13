@@ -8,7 +8,7 @@
     <form id="form1" runat="server">
         <div>
             <div>
-                <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label>
                 <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="Apellido Paterno"></asp:Label>
