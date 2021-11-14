@@ -168,13 +168,13 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.WebControls.TextBox txtStartAttention;
 
         /// <summary>
-        /// Control RequiredFieldValidator5.
+        /// Control RequiredFieldValidator7.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
 
         /// <summary>
         /// Control Label6.
@@ -231,12 +231,12 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.WebControls.Label PRUEBAS;
 
         /// <summary>
-        /// Control ValidationSummary1.
+        /// Control ValidationSummary2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary2;
     }
 }

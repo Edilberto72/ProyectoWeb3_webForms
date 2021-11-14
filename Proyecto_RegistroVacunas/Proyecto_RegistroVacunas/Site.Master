@@ -8,6 +8,13 @@
     <title></title>
     <style type="text/css">
 
+        *{
+            margin: 0px;
+            padding: 0px;
+            border:none;
+            box-sizing: border-box;
+        }
+
         /*footer*/
         footer{
             width: 100%;
@@ -114,6 +121,8 @@
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
+
+        
         <footer>
             <div class="containerPrincipal">
                   
