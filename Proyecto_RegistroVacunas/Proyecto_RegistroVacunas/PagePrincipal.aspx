@@ -94,91 +94,7 @@
             color:white;
             border-radius: 4px;
         }
-            
         
-
-
-        /*footer*/
-        footer{
-            width: 100%;
-            background: #202020;
-            color: white;
-            
-        }
-
-        .containerPrincipal{
-            width: 100%;
-            max-width: 1200px;
-            margin:auto;
-            padding:40px;
-        }
-
-        .container{
-            display:flex;
-            justify-content:space-around;
-        }
-
-        .colum1{
-            max-width: 400px;   
-
-        }
-        .colum2{
-            max-width: 400px;
-            align-items:center;
-        }
-        .colum2 h1{
-            font-size: 22px;
-            margin-top: 20px;
-        }
-        .row{
-            margin-top:20px;
-            display:flex;
-        }
-        .row .image{
-            width:36px;
-            height:36px;
-
-        }
-        .row .label{
-            margin-top: 20px;
-            margin-left:10px;
-            color: #C7C7C7;
-        }
-        .colum3{
-            max-width: 400px;
-            align-items:center;
-        }
-        .colum3 h1{
-            font-size: 22px;
-            margin-top:20px;
-        }
-        .row2{
-            margin-top:20px;
-            display:flex;
-            align-items:center;
-        }
-        .row2 .image{
-            width:36px;
-            height:36px;
-        }
-        .row2 .label{
-            margin-top:5px;
-            margin-left: 10px;
-            color: #C7C7C7;
-        }
-        .cointainerFooter{
-            width:100%;
-            background: #101010;
-            
-        }
-        .footer{
-            max-width: 1200px;
-            margin:auto;
-            display:flex;
-            justify-content:space-between;
-            padding: 40px;
-        }
-
 
         /*Responsive Header*/
         @media screen and (max-width: 1100px){
@@ -205,23 +121,7 @@
             }
 
         }
-        /*Responsive Footer*/
-        @media screen and (max-width: 1100px){
-            .container{
-                flex-wrap:wrap; 
-            }
-
-            .colum1{
-                max-width:100%;
-            }
-
-            .colum2,
-            .colum3{
-                margin-top: 40px;
-
-            }
-
-        }
+        
         /*agregar meta:vp*/
     </style>
 </asp:Content>
@@ -237,9 +137,9 @@
                     </div>
 
                     <div class="nav2">
-                      <asp:Button ID="Button3" runat="server" Text="Inicio de Sesion Personal" OnClick="btnPersonalLogin_Click" CssClass="buttonNav" />
                       <asp:Button ID="btnVaccineRegistration" runat="server" Text="Registrar Vacunas" CssClass="buttonNav" OnClick="btnVaccineRegistration_Click" />
-                        <asp:Button ID="btnAppointmentManager" runat="server" OnClick="btnAppointmentManager_Click" Text="Administrarcion de Citas" />
+                      <asp:Button ID="btnVaccineConfirmation" runat="server" CssClass="buttonNav" Text="Administrarcion de Citas" OnClick="btnVaccineConfirmation_Click" />
+                      <asp:Button ID="btnLogin" runat="server" Text="Inicio de Sesion Personal" OnClick="btnPersonalLogin_Click" CssClass="buttonNav" />
                     </div>
                 </div>
             </div>                        
@@ -260,68 +160,5 @@
                 </div>    
             </div>        
         </section>
-
-
-        <footer>
-
-            <div class="containerPrincipal">
-                  
-            <div class="container">
-                <div class="colum1">
-                    <asp:Image ID="Image3" runat="server" />
-                </div>
-
-                <div class="colum2">
-                    <h1>Redes Sociales:</h1>
-
-                    <div class="row">
-                        <div class="FacebookPage">
-                          <asp:Image ID="Image4" runat="server" ImageUrl="~/Images/facebook.png" CssClass="image" />
-                          <asp:Label CssClass="label" ID="Label7" runat="server" Text="Pagina de Facebook Ministerio de salud"></asp:Label>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="MinistryPageContainer">
-                         <asp:Label ID="Label6" runat="server" Text="Pagina del ministerio de Salud:"></asp:Label><br />
-                         <asp:Button ID="Button2" runat="server" Text="Ministerio de Salud" OnClick="btnHealthMinistryPage_Click" />
-                       </div>
-                    </div>       
-                </div>
-
-                <div class="colum3">
-
-                    <h1>Informacion:</h1>
-
-                    <div class="row2">
-                        <div class="LocationContainer">
-                           <asp:Label ID="Label4" runat="server" Text="Nuestra Ubicacion:"></asp:Label><br />
-                            <asp:Image ID="Image6" runat="server" CssClass="image" ImageUrl="~/Images/house.png" />
-                           <asp:Button ID="Button1" runat="server" Text="Hospital Centinela - Cochabamba" OnClick="btnLocation_Click" Width="365px" />
-                        </div>
-                    </div>
-                   
-                    <div class="row2">
-                        <div class="ContactNumberContainer">
-                           <asp:Label ID="Label3" runat="server" Text="Nuestros Numeros de Contacto:"></asp:Label><br />
-                            <asp:Image ID="Image5" runat="server" CssClass="image" ImageUrl="~/Images/smartphone.png" />
-                           <asp:Label ID="Label5" runat="server" Text="4-4568342" CssClass="label"></asp:Label>
-                        </div>
-                    </div>
-                   
-                </div>
-            </div>
-
-            </div>
-
-                <div class="cointainerFooter">
-                    <div class="footer">
-                         <div class="copy">
-                            <asp:Label ID="Label8" runat="server" Text="© 2021 Todos los Derechos Reservados"></asp:Label>
-                         </div>
-                    </div>
-                    
-                </div>                     
-        </footer>
     </form>
 </asp:Content>
