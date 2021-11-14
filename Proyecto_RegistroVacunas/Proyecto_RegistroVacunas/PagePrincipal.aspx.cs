@@ -11,12 +11,19 @@ namespace Proyecto_RegistroVacunas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('"+ex.Message+"');</script>");
+            }
         }
 
         protected void btnPersonalLogin_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("PersonalLogin.aspx");
         }
 
         protected void btnRegisterAppointment_Click(object sender, EventArgs e)
