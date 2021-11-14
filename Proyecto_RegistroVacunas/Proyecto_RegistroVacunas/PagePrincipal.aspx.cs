@@ -45,16 +45,6 @@ namespace Proyecto_RegistroVacunas
             }
         }
 
-        protected void btnLocation_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnHealthMinistryPage_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void btnVaccineRegistration_Click(object sender, EventArgs e)
         {
             try
