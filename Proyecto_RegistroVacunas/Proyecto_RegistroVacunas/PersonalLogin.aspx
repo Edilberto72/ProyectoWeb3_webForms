@@ -28,7 +28,7 @@
          align-items:center;
          }
 
-         .title{
+         .containerTitle{
              text-align: center;
              font-weight: 700;
          }
@@ -139,7 +139,10 @@
         
             
             <div Class="form">
-                <asp:Label class="title" runat="server" Text="Inicio de Sesion Para Personal"></asp:Label>
+                <div class="containerTitle">
+                    <asp:Label class="title" runat="server" Text="Inicio de Sesion Para Personal"></asp:Label>
+                </div>
+                
 
                 <div Class="group">
                     
