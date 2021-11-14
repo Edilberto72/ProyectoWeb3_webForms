@@ -5,7 +5,7 @@
     <form id="form1" runat="server">
         <asp:DropDownList ID="cmbVaccinationDay" runat="server" OnSelectedIndexChanged="cmbVaccinationDay_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
         <br />
-        <asp:GridView ID="dataVaccineConfirmation" runat="server" OnSelectedIndexChanged="dataVaccineConfirmation_SelectedIndexChanged">
+        <asp:GridView ID="dataVaccineConfirmation" runat="server" OnSelectedIndexChanged="dataVaccineConfirmation_SelectedIndexChanged" AllowPaging="True" OnPageIndexChanging="dataVaccineConfirmation_PageIndexChanging">
             <columns>
                 <asp:CommandField ButtonType="Button" HeaderText="Seleccionar" ShowHeader="True" ShowSelectButton="True" />
             </columns>
