@@ -77,7 +77,7 @@
         .containerDescription{
             max-width:600px;
         }
-        .containerDescription .labelDescripcion{
+        .containerDescription h3{
             color:white;
             font-size: 40px;
         }
@@ -120,9 +120,11 @@
 
         .colum1{
             max-width: 400px;   
+
         }
         .colum2{
             max-width: 400px;
+            align-items:center;
         }
         .colum2 h1{
             font-size: 22px;
@@ -144,6 +146,7 @@
         }
         .colum3{
             max-width: 400px;
+            align-items:center;
         }
         .colum3 h1{
             font-size: 22px;
@@ -152,13 +155,14 @@
         .row2{
             margin-top:20px;
             display:flex;
+            align-items:center;
         }
         .row2 .image{
             width:36px;
             height:36px;
         }
         .row2 .label{
-            margin-top:10px;
+            margin-top:5px;
             margin-left: 10px;
             color: #C7C7C7;
         }
@@ -181,6 +185,25 @@
             .nav{
                 flex-wrap:wrap;
             }
+            .nav1,
+            .nav2{
+                margin-top: 40px;
+            }
+        }
+
+        /*Responsive Section*/
+        @media screen and (max-width: 1100px){
+            .containerSection{
+                flex-wrap:wrap;
+            }
+            .imageSection{
+                max-width: 100%;
+            }
+            h3,
+            .btnRegister{
+                margin-top: 40px;
+            }
+
         }
         /*Responsive Footer*/
         @media screen and (max-width: 1100px){
@@ -197,6 +220,7 @@
                 margin-top: 40px;
 
             }
+
         }
         /*agregar meta:vp*/
     </style>
@@ -214,12 +238,13 @@
 
                     <div class="nav2">
                       <asp:Button ID="Button3" runat="server" Text="Inicio de Sesion Personal" OnClick="btnPersonalLogin_Click" CssClass="buttonNav" />
-                      <asp:Button ID="Button5" runat="server" Text="Button" CssClass="buttonNav" />
+                      <asp:Button ID="btnVaccineRegistration" runat="server" Text="Registrar Vacunas" CssClass="buttonNav" OnClick="btnVaccineRegistration_Click" />
+                        <asp:Button ID="btnAppointmentManager" runat="server" OnClick="btnAppointmentManager_Click" Text="Administrarcion de Citas" />
                     </div>
                 </div>
             </div>                        
         </header>
-
+       
 
         <section>
             <div class="containerSectionPrincipal">
@@ -229,7 +254,7 @@
                     </div>
 
                     <div class="containerDescription">
-                        <asp:Label ID="Label9" runat="server" Text="Label" CssClass="labelDescripcion"></asp:Label><br />
+                        <h3>Tus seres queridos te necesitan. <br /> Cuando llegue tu turno, vacunate contra el Covid-19,<br /> para que Puedas apoyarlos</h3>
                         <asp:Button ID="Button4" runat="server" Text="Registra tu Cita" OnClick="btnRegisterAppointment_Click" CssClass="btnRegister" />                
                     </div>
                 </div>    
