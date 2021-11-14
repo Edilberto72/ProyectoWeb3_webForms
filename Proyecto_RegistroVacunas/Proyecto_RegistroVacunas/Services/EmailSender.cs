@@ -23,7 +23,7 @@ namespace Proyecto_RegistroVacunas.Services
             Addressee = addressee; // usuario al que se enviará el correo
             Addressee.email = "jgpandia1@gmail.com";
             SenderEmail = "jgpandia1@gmail.com"; // correo que hará el envío, el correo debe tener habilitado el uso para aplicaciones no seguras
-            SenderPassword = "JGPAndia"; // contraseña del correo que hacer el envío
+            SenderPassword = ""; // contraseña del correo que hacer el envío
         }
 
         public void SendAppointmentConfirmationEmail()
