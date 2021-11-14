@@ -35,7 +35,7 @@
 
          .form{
          background: #fff;
-         padding: 40px 0;
+         padding:20px 0;
          box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
          border-radius: 10px;
          }
@@ -47,7 +47,7 @@
 
         .form .group{
         position: relative;
-        margin: 45px ;
+        margin: 35px ;
         }
 
         input{
@@ -98,12 +98,12 @@
         left: 0;
         }
 
-        input:focus~.barra::before{
+        input:focus~.barra ::before{
         width: 100%;
         }
 
 
-        .button{
+        .button .btn1{
         background: #4568DC;
         /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
@@ -114,15 +114,42 @@
         display: block;
         width: 80%;
         margin: 10px auto;
-        color: #fff;
         height: 40px;
         font-size: 16px;
         cursor: pointer;
+        margin-top: 20px ;
+        border-radius:6px;
+        }
+        .btn1{
+            color:white;
+        }
+
+        .button .btn2{
+        background: #4568DC;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #B06AB3, #4568DC);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        border: none;
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+        height: 40px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px ;
+        border-radius:6px;
         }
 
         @media screen and (max-width:500px){
         form{
         width: 80%;
+        }
+
+        .btn1,
+        .btn2{
+            margin-top: 20px;
         }
         }
 
@@ -142,13 +169,7 @@
                 <div class="containerTitle">
                     <asp:Label class="title" runat="server" Text="Inicio de Sesion Para Personal"></asp:Label>
                 </div>
-                
-
-                <div Class="group">
-                    
-                    <asp:Label class="label" runat="server" Text="Nombre:"><span class="barra"></span></asp:Label>
-                    <asp:TextBox ID="txbNamePersonal" runat="server"></asp:TextBox>
-                </div>
+      
 
                 <div class="group">
                     <asp:Label class="label" runat="server" Text="Correo Electronico:"><span class="barra"></span></asp:Label>
@@ -161,8 +182,13 @@
                 </div>
                       
                 <div class="button">
-                    <asp:Button ID="Button1" runat="server" Text="Registrar" OnClick="btnPersonalRecord_Click"/>
-                    <asp:Button ID="Button2" runat="server" Text="Iniciar Sesion" OnClick="btnPersonalLogin_Click"/>
+                    <div class="btn1">
+                        <asp:Button ID="btnPersonalLogin" runat="server" Text="Iniciar Sesion" OnClick="btnPersonalLogin_Click"/>                      
+                    </div>
+
+                    <div class="btn2">
+                        <asp:Button ID="Button1" runat="server" Text="Registrar" OnClick="btnPersonalRecord_Click"/>
+                    </div>                    
                 </div>
                 
             </div>

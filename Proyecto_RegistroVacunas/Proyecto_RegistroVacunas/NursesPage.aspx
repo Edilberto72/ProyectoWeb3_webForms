@@ -1,39 +1,104 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NursesPage.aspx.cs" Inherits="Proyecto_RegistroVacunas.NursesPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            border:none;
+            box-sizing: border-box;
+        }
+        /*Header*/
+        header{
+            width:100%;
+            background: #014663;
+            color:white;
+        }
+        .navPrincipal{
+            width:100%;
+            max-width:1200px;
+            margin:auto;
+            padding:40px;
+        }
+        .nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        header .title{
+            font-size:30px;
+        }
+        .nav1{
+            max-width:600px;
+        }
+        .nav2{
+            max-width:600px;
+            
+            
+        }
+        .buttonNav{
+            padding:10px;
+            margin-left: 20px;
+            border:none;
+            background: #014663;
+            color:white;
+            font-size: 20px;
+        }
+        .buttonNav:hover{
+            background: #000000;
+            color:white;
+            border-radius: 4px;
+        }
+
+        /*Responsive Header*/
+        @media screen and (max-width: 1100px){
+
+            .nav{
+                flex-wrap:wrap;
+                align-items:center;
+            }
+            .nav1,
+            .nav2{
+                margin-top: 40px;
+            }
+        }
+
+        @media screen and (max-width: 1200px){
+
+            .nav1{
+                flex-wrap:wrap;
+                align-items:center;
+            }
+            
+            .nav2{
+                flex-wrap: wrap;
+                align-items:center;
+            }
+        }
+    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
         <header>
-            <asp:Label ID="Label1" runat="server" Text="Hospital Centinela"></asp:Label>
-            <asp:Button ID="bynSignOff" runat="server" Text="Cerrar Sesion" OnClick="btnSignOff_Click" />
-            <asp:Button ID="btnVaccineRegister" runat="server" Text="Registrar Vacunas" OnClick="btnVaccineRegister_Click" />
+            <div class="navPrincipal">
+                <div class="nav">
+                    <div class="nav1">
+                        <asp:Label ID="Label1" runat="server" Text="Hospital Centinela" CssClass="title"></asp:Label>
+                    </div>
+
+                    <div class="nav2">
+                        <asp:Button ID="bynSignOff" runat="server" Text="Cerrar Sesion" CssClass="buttonNav" OnClick="btnSignOff_Click" />
+                    </div>
+                </div>
+            </div>           
         </header>
 
         <section>
 
         </section>
         
-        <footer>
-            <asp:Image ID="Image1" runat="server" />
-
-            <div class="LocationContainer">
-                <asp:Label ID="Label2" runat="server" Text="Nuestra Ubicacion"></asp:Label><br />
-                <asp:Button ID="btnLocation" runat="server" Text="Hospital Centinela - Cochabamba" OnClick="btnLocation_Click" />
-            </div>
-            
-            <div class="ContactNumberContainer">
-                <asp:Label ID="ContactNumber" runat="server" Text="Nuestros Numeros de Contacto"></asp:Label><br />
-                <asp:Label ID="Label4" runat="server" Text="4-4568342"></asp:Label>
-            </div>
-            
-            <div class="MinistryPageContainer">
-                <asp:Label ID="Label3" runat="server" Text="Pagina del ministerio de Salud"></asp:Label><br />
-                <asp:Button ID="btnHealthMinistryPage" runat="server" Text="Ministerio de Salud" OnClick="btnHealthMinistryPage_Click" />
-            </div>
-            
-            
-
-        </footer>
+        
         
         
     </form>
