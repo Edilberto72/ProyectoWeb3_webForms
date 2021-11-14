@@ -33,15 +33,6 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control Button3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
-
-        /// <summary>
         /// Control btnVaccineRegistration.
         /// </summary>
         /// <remarks>
@@ -51,13 +42,22 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.WebControls.Button btnVaccineRegistration;
 
         /// <summary>
-        /// Control btnAppointmentManager.
+        /// Control btnVaccineConfirmation.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAppointmentManager;
+        protected global::System.Web.UI.WebControls.Button btnVaccineConfirmation;
+
+        /// <summary>
+        /// Control btnLogin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLogin;
 
         /// <summary>
         /// Control Image1.

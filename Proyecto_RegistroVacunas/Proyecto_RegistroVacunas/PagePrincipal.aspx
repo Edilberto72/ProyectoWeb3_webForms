@@ -237,9 +237,9 @@
                     </div>
 
                     <div class="nav2">
-                      <asp:Button ID="Button3" runat="server" Text="Inicio de Sesion Personal" OnClick="btnPersonalLogin_Click" CssClass="buttonNav" />
                       <asp:Button ID="btnVaccineRegistration" runat="server" Text="Registrar Vacunas" CssClass="buttonNav" OnClick="btnVaccineRegistration_Click" />
-                        <asp:Button ID="btnAppointmentManager" runat="server" OnClick="btnAppointmentManager_Click" Text="Administrarcion de Citas" />
+                      <asp:Button ID="btnVaccineConfirmation" runat="server" CssClass="buttonNav" Text="Administrarcion de Citas" OnClick="btnVaccineConfirmation_Click" />
+                      <asp:Button ID="btnLogin" runat="server" Text="Inicio de Sesion Personal" OnClick="btnPersonalLogin_Click" CssClass="buttonNav" />
                     </div>
                 </div>
             </div>                        
