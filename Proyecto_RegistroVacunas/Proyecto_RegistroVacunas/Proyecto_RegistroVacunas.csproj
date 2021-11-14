@@ -86,6 +86,11 @@
   <ItemGroup>
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Diseño sin título %281%29.png" />
+    <Content Include="Images\Evening_Sunshine.jpg" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\house.png" />
+    <Content Include="Images\smartphone.png" />
     <Content Include="Models\myEF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>myEF.edmx</DependentUpon>
@@ -231,7 +236,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Certificates\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

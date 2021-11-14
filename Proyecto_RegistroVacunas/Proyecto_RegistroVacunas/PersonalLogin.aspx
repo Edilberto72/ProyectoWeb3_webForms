@@ -3,93 +3,169 @@
 
 
     <style type="text/css">
-        *{
-         margin: 0;
-         padding: 0%;
-         box-sizing: border-box;
-         }
+        :root {
+         --colorTextos: #49454567;
+        }
 
-         body{
-         background: #014663;
-         }
 
-         header{
-         text-align: center;
-         top: 10px;
-         color: white;
-         }
+        *,
+        ::before,
+        ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+       
 
-         .form_register{
-         width: 400px;
-         background: #014663;
-         padding: 30px;
-         margin: auto;
-         margin-top: 100px;
-         border-radius: 4px;
-         font-family: 'calibri';
-         color: white;
-         box-shadow: 7px 13px 37px #000;
+         .body{
+          background: #b92b27;  /* fallback for old browsers */
+          background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+         height:650px;
+         display:flex;
+         justify-content: center;
+         align-items:center;
          }
 
          .title{
-         font-size: 22px;
-         margin-bottom: 20px;
-         color:white;
+             text-align: center;
+             font-weight: 700;
          }
 
-         .controls{
-         width: 100%;
-         background: #014663;
-         padding: 10px;
-         border-radius: 4px;
-         margin-bottom: 16px;
-         border: 1px solid;
-         font-family: 'calibri';
-         font-size: 18px;
-         color: white;
+         .form{
+         background: #fff;
+         padding: 40px 0;
+         box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+         border-radius: 10px;
          }
 
-         .button{
-         width: 100%;
-         background: #1f53c5;
-         border: none;
-         border-radius: 4px;
-         flex-grow: initial;
-         padding: 12px;
-         color: white;
-         margin: 16px 0;
-         font-size: 16px;
-         font-family: 'calibri';
-         text-decoration: white;
-         line-height: 40px;
-          }
+        .form{
+        width: 100%;
+        margin: auto;
+        }
+
+        .form .group{
+        position: relative;
+        margin: 45px ;
+        }
+
+        input{
+        background: none;
+        color: #c6c6c6;
+        font-size: 18px;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid var(--colorTextos);
+        }
+
+        input:focus{ 
+        outline: none;
+        color: #5e5d5d;
+        }
+        .label{
+        color: var(--colorTextos);
+        font-size: 16px;
+        position: absolute;
+        left: 5px;
+        top: 10px;
+        transition: 0.5s ease all;
+        pointer-events: none;
+        }
+
+        input:focus~label,
+        input:valid~label{
+        top: -14px;
+        font-size: 12px;
+        color: #2196f3;
+        }
+        .barra{
+        position: relative;
+        display: block;
+        width: 100%;
+        }
+
+        .barra::before{
+        content: "";
+        height: 2px;
+        width: 0%;
+        bottom: 0;
+        position: absolute;
+        background: linear-gradient(to right, #B06AB3, #4568DC);
+        transition: 0.3s ease width;
+        left: 0;
+        }
+
+        input:focus~.barra::before{
+        width: 100%;
+        }
+
+
+        .button{
+        background: #4568DC;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #B06AB3, #4568DC);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        border: none;
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+        color: #fff;
+        height: 40px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+
+        @media screen and (max-width:500px){
+        form{
+        width: 80%;
+        }
+        }
+
+
+       
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="form1" runat="server">
-        <header>
-            <asp:Label ID="Label2" runat="server" Text="Hospital Centinela"></asp:Label>
-        </header>
 
-        <section class="form-register">
-             <asp:Label class="title" runat="server" Text="Inicio de Sesion Para Personal"></asp:Label>
-            <div class="controls">
-                <asp:Label ID="Label1" runat="server" Text="Nombre:"></asp:Label><br />
-             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
-             <asp:Label ID="Label4" runat="server" Text="Correo Electronico:"></asp:Label><br />
-             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox><br />
-             <asp:Label ID="Label7" runat="server" Text="Contraseña:"></asp:Label><br />
-             <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox><br />
-            </div>
-             
-            <div class="button">
-                <asp:Button ID="Button2" runat="server" Text="Registrar" OnClick="btnPersonalRecord_Click"/>
-                <asp:Button ID="Button1" runat="server" Text="Iniciar Sesion" OnClick="btnPersonalLogin_Click"/><br />
-            </div>
-             
-        </section>
+    <section Class="body">
+      <form id="form1" runat="server">
 
+
+        
+            
+            <div Class="form">
+                <asp:Label class="title" runat="server" Text="Inicio de Sesion Para Personal"></asp:Label>
+
+                <div Class="group">
+                    
+                    <asp:Label class="label" runat="server" Text="Nombre:"><span class="barra"></span></asp:Label>
+                    <asp:TextBox ID="txbNamePersonal" runat="server"></asp:TextBox>
+                </div>
+
+                <div class="group">
+                    <asp:Label class="label" runat="server" Text="Correo Electronico:"><span class="barra"></span></asp:Label>
+                    <asp:TextBox ID="txbEmailPersonal" runat="server"></asp:TextBox>
+                </div>
+
+                <div class="group">
+                    <asp:Label class="label" runat="server" Text="Contraseña:"><span class="barra"></span></asp:Label>
+                    <asp:TextBox ID="txbPasswordPersonal" runat="server"></asp:TextBox>
+                </div>
+                      
+                <div class="button">
+                    <asp:Button ID="Button1" runat="server" Text="Registrar" OnClick="btnPersonalRecord_Click"/>
+                    <asp:Button ID="Button2" runat="server" Text="Iniciar Sesion" OnClick="btnPersonalLogin_Click"/>
+                </div>
+                
+            </div>
+                                
        
-       
-    </form>
+                    
+             </form>
+         </section>
 </asp:Content>
