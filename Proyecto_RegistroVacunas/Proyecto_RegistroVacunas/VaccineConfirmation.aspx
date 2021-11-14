@@ -11,21 +11,18 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section>
+    <section>  
         <form id="form1" runat="server">
-
-         <div class="containerPrincipal">
-                <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="cmbVaccinationDay_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
-                <br />
-                <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="dataVaccineConfirmation_SelectedIndexChanged">
-                    <columns>
-                        <asp:CommandField ButtonType="Button" HeaderText="Seleccionar" ShowHeader="True" ShowSelectButton="True" />
-                    </columns>
-                </asp:GridView>
-                <asp:Button ID="Button1" runat="server" Text="Confirmar vacunacion" OnClick="btnVaccinationRegister_Click" />
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-         </div>
-
+            <asp:DropDownList ID="cmbVaccinationDay" runat="server" OnSelectedIndexChanged="cmbVaccinationDay_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
+            <br />
+            <asp:GridView ID="dataVaccineConfirmation" runat="server" OnSelectedIndexChanged="dataVaccineConfirmation_SelectedIndexChanged" AllowPaging="True" OnPageIndexChanging="dataVaccineConfirmation_PageIndexChanging">
+                <columns>
+                    <asp:CommandField ButtonType="Button" HeaderText="Seleccionar" ShowHeader="True" ShowSelectButton="True" />
+                </columns>
+            </asp:GridView>
+            <asp:Button ID="btnVaccinationRegister" runat="server" Text="Confirmar vacunacion" OnClick="btnVaccinationRegister_Click" />
+            <asp:TextBox ID="txtPrueba" runat="server"></asp:TextBox>
         </form>
     </section>
+
 </asp:Content>

@@ -29,6 +29,7 @@ namespace Proyecto_RegistroVacunas
             {
                 if (IsPostBack)
                 {
+                    Refresh();
                     if (Application["userID"] != null)
                     {
                         userID = int.Parse(Application["userID"].ToString());
@@ -85,6 +86,12 @@ namespace Proyecto_RegistroVacunas
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
+        }
+
+        protected void dataVaccineConfirmation_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            this.dataVaccineConfirmation.PageIndex = e.NewPageIndex;
+            this.dataVaccineConfirmation.DataBind();
         }
     }
 }
