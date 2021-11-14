@@ -24,15 +24,6 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control txbNamePersonal.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbNamePersonal;
-
-        /// <summary>
         /// Control txbEmailPersonal.
         /// </summary>
         /// <remarks>
@@ -51,6 +42,15 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.WebControls.TextBox txbPasswordPersonal;
 
         /// <summary>
+        /// Control btnPersonalLogin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPersonalLogin;
+
+        /// <summary>
         /// Control Button1.
         /// </summary>
         /// <remarks>
@@ -58,14 +58,5 @@ namespace Proyecto_RegistroVacunas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-
-        /// <summary>
-        /// Control Button2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }
