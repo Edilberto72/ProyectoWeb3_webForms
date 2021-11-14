@@ -63,18 +63,6 @@
             }
         }
 
-        @media screen and (max-width: 1200px){
-
-            .nav1{
-                flex-wrap:wrap;
-                align-items:center;
-            }
-            
-            .nav2{
-                flex-wrap: wrap;
-                align-items:center;
-            }
-        }
     </style>
 
 </asp:Content>
