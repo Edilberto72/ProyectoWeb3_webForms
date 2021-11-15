@@ -68,19 +68,20 @@
         .label{
         color: var(--colorTextos);
         font-size: 16px;
-        position: absolute;
+        position: relative;
         left: 5px;
         top: 10px;
         transition: 0.5s ease all;
         pointer-events: none;
         }
 
-        input:focus~label,
-        input:valid~label{
-        top: -14px;
-        font-size: 12px;
-        color: #2196f3;
+        input:focus + label,
+        input:valid + label{
+            top: -14px;
+            font-size: 12px;
+            color: #2196f3;
         }
+
         .barra{
         position: relative;
         display: block;
@@ -172,12 +173,12 @@
       
 
                 <div class="group">
-                    <asp:Label class="label" runat="server" Text="Correo Electronico:"><span class="barra"></span></asp:Label>
-                    <asp:TextBox ID="txbEmailPersonal" runat="server"></asp:TextBox>
+                    <asp:Label class="label" AssociatedControlID="txbEmailPersonal" runat="server"  Text="Correo Electronico:"></asp:Label>
+                    <asp:TextBox ID="txbEmailPersonal"   runat ="server"></asp:TextBox>
                 </div>
 
                 <div class="group">
-                    <asp:Label class="label" runat="server" Text="Contraseña:"><span class="barra"></span></asp:Label>
+                    <asp:Label CssClass="label"  AssociatedControlID="txbPasswordPersonal" runat="server" Text="Contraseña:"></asp:Label>
                     <asp:TextBox ID="txbPasswordPersonal" runat="server"></asp:TextBox>
                 </div>
                       

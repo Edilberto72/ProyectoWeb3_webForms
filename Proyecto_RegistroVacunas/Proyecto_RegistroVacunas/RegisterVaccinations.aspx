@@ -13,21 +13,65 @@
     <style type="text/css">
         .container {
             max-width:1200px;
+            
+        }
+        section{
+            background: #014663;
         }
         .containerForm{
             width:100%;
             max-width:1200px;
             margin:auto;
             padding:40px;
+            
         }
         .containerAll{
             display:flex;
             justify-content:space-between;
+            flex-direction:column;
+            
         }
-        .form{
+        .row{
+            
+            
+            
+        }
+        .row2{
+            width:100%;
+            color: white;
+            margin-left:auto;
+            display:flex;
+            padding: 40px;
+            align-items:center;
+            margin:auto;
+        }
+        
+        .title{
+            color:white;
+            font-size: 40px;
+            margin:auto;
+            
 
         }
         
+        #imgForm{
+            width:300px;
+            margin:auto;
+        }
+        .button{
+            margin:auto;
+            padding:10px;
+            margin-left: auto;
+            border:none;
+            background: #014663;
+            color:white;
+            font-size: 20px;
+        }
+        .button:hover{
+            background: #000000;
+            color:white;
+            border-radius: 4px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -74,7 +118,7 @@
 
                 <br />
                     <div class="title">
-                        <asp:Label ID="Label4" runat="server" Text="Horario de atención"></asp:Label>
+                        <asp:Label ID="Label4" runat="server" Text="Horario de atención" CssClass="title"></asp:Label>
                     </div>
                 <br />
 
@@ -94,7 +138,7 @@
                 </div>
                 <br />
                     <div class="button">
-                        <asp:Button ID="btnRegister" runat="server" Text="Registrar" OnClick="btnRegister_Click" />
+                        <asp:Button ID="btnRegister" runat="server" Text="Registrar" OnClick="btnRegister_Click" CssClass="button" />
                         <asp:Label runat="server" ID="PRUEBAS"></asp:Label>
                         <asp:ValidationSummary ID="ValidationSummary2" runat="server" style="margin-bottom: 0px" />
                     </div>
@@ -102,11 +146,11 @@
             </div>
             </div>
                 
-
+            
+         </div>
             <div class="image">
                 <img ID="imgForm" src="https://img.medicalexpo.es/images_me/photo-g/68248-11136571.jpg" />
             </div>
-         </div>              
     </form>
         </section>
 </asp:Content>
