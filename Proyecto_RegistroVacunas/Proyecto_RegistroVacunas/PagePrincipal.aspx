@@ -71,7 +71,7 @@
             max-width: 600px;
         }
         .containerimage .imageSection{
-            width:500px;
+            width:400px;
             height:500px;
         }
         .containerDescription{
@@ -155,7 +155,7 @@
             <div class="containerSectionPrincipal">
                 <div class="containerSection">
                     <div class="containerimage">
-                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/Diseño sin título (1).png" CssClass="imageSection" />
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/IMGPrincipalLogo.png" CssClass="imageSection" />
                     </div>
 
                     <div class="containerDescription">
