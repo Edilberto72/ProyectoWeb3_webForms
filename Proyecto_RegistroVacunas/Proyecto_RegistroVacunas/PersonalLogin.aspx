@@ -179,17 +179,13 @@
 
                 <div class="group">
                     <asp:Label CssClass="label"  AssociatedControlID="txbPasswordPersonal" runat="server" Text="Contraseña:"></asp:Label>
-                    <asp:TextBox ID="txbPasswordPersonal" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txbPasswordPersonal" runat="server" TextMode="Password"></asp:TextBox>
                 </div>
                       
                 <div class="button">
                     <div class="btn1">
                         <asp:Button ID="btnPersonalLogin" runat="server" Text="Iniciar Sesion" OnClick="btnPersonalLogin_Click"/>                      
-                    </div>
-
-                    <div class="btn2">
-                        <asp:Button ID="Button1" runat="server" Text="Registrar" OnClick="btnPersonalRecord_Click"/>
-                    </div>                    
+                    </div>            
                 </div>
                 
             </div>

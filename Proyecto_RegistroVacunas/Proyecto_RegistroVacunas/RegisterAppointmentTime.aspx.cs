@@ -105,5 +105,10 @@ namespace Proyecto_RegistroVacunas
             //antes estaba con cmbDate.SelectedIndex
             Refresh();
         }
+
+        protected void btnToPagePrincipal_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("PagePrincipal.aspx");
+        }
     }
 }

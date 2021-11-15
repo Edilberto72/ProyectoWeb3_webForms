@@ -16,5 +16,7 @@ namespace Proyecto_RegistroVacunas.Interfaces
         bool EmailAlreadyExists(string email);
 
         User GetUser(int userID);
+
+        User AuthenticateUser(string email, string password);
     }
 }

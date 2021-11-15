@@ -165,5 +165,20 @@ namespace Proyecto_RegistroVacunas.Models
                 throw ex;
             }
         }
+
+        public User AuthenticateUser(string email, string password)
+        {
+            try
+            {
+                using (DBVaccineControlEntities context = new DBVaccineControlEntities())
+                {
+                    return context.User.Where(x => x.email == email && x.password == password).FirstOrDefault();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
