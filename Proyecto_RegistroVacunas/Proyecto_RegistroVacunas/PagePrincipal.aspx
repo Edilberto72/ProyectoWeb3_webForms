@@ -76,10 +76,14 @@
         }
         .containerDescription{
             max-width:600px;
+            padding: 20px;
+            
         }
         .containerDescription h3{
             color:white;
             font-size: 40px;
+            margin:auto;
+            padding:20px;
         }
         .btnRegister{
             padding:10px;
