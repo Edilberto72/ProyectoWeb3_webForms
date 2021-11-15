@@ -68,11 +68,16 @@ namespace Proyecto_RegistroVacunas
                     }
 
                     vaccinationRecordM.InsertTransaction(vaccionationRecord, listVaccinationSchedules);
+                    Response.Redirect("PagePrincipal.aspx");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Vacunas insuficientes');</script>");
                 }
             }
             catch (Exception ex)
             {
-                Response.Write("<script>alert("+ex.Message+");</script>");
+                Response.Write("<script>alert('"+ex.Message+"');</script>");
             }
         }
     }

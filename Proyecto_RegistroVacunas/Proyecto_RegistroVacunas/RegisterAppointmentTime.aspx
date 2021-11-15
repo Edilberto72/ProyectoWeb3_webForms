@@ -33,7 +33,7 @@
         </div>
         <br />
         <asp:Button ID="btnRegister" runat="server" Text="Registrar cita" OnClick="btnRegister_Click" />
-
+        <asp:Button ID="btnToPagePrincipal" runat="server" Text="Volver a la pagina principal" OnClick="btnToPagePrincipal_Click" />
         <asp:TextBox ID="txtPrueba" Text="" runat="server" />
     </form>
 </asp:Content>
