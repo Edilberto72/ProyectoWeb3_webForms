@@ -114,6 +114,16 @@
                 flex-wrap:wrap;
             }
         }
+
+        @media screen and (max-width: 1100px){
+            .containerForm{
+                flex-wrap: wrap;
+            }
+            .row, 
+            .row2{
+                margin-top: 20px;
+            }
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -200,9 +210,6 @@
                 
             
          </div>
-            <div class="image">
-                <img ID="imgForm" src="https://img.medicalexpo.es/images_me/photo-g/68248-11136571.jpg" />
-            </div>
     </form>
         </section>
 </asp:Content>
