@@ -24,6 +24,15 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Control Label7.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
+
+        /// <summary>
         /// Control Label1.
         /// </summary>
         /// <remarks>
@@ -60,13 +69,13 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
 
         /// <summary>
-        /// Control Label3.
+        /// Control Label5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
         /// Control txtSecondLastName.
@@ -78,13 +87,13 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.WebControls.TextBox txtSecondLastName;
 
         /// <summary>
-        /// Control Label4.
+        /// Control Label3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
         /// Control txtEmail.
@@ -123,13 +132,13 @@ namespace Proyecto_RegistroVacunas
         protected global::System.Web.UI.WebControls.Button btnRegister;
 
         /// <summary>
-        /// Control btnToPagePrincipal.
+        /// Control Button1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnToPagePrincipal;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
         /// Control txtPrueba.

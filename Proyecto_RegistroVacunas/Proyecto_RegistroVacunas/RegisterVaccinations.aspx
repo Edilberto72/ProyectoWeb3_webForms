@@ -11,6 +11,31 @@
         
     </script>
     <style type="text/css">
+        /*Header*/
+        header{
+            width:100%;
+            background: #014663;
+            color:white;
+        }
+        .navPrincipal{
+            width:100%;
+            max-width:1200px;
+            margin:auto;
+            padding:40px;
+        }
+        .nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        header .title{
+            font-size:30px;
+        }
+        .nav1{
+            max-width:600px;
+        }
+
+        /*Section*/
         .container {
             max-width:1200px;
             
@@ -72,9 +97,36 @@
             color:white;
             border-radius: 4px;
         }
+
+        /*Responsive Header*/
+        
+        @media screen and (max-width: 1100px){
+            .nav{
+                flex-wrap:wrap;
+            }
+            .nav1{
+                margin-top: 40px;
+            }
+        }
+
+        @media screen and (max-width: 1100px){
+            .containerForm{
+                flex-wrap:wrap;
+            }
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <header>
+        <div class="navPrincipal">
+            <div class="nav">
+                <div class="nav1">
+                    <asp:Label ID="Label7" runat="server" Text="Hospital Centinela" CssClass="title"></asp:Label>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <section>
     <form id="formRegisterVaccinations" runat="server">
